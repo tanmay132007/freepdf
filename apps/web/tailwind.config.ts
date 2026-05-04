@@ -7,7 +7,14 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        navy: "#111827"
+      },
+      fontFamily: {
+        syne: ["Syne", "ui-sans-serif", "system-ui", "sans-serif"]
+      }
+    }
   },
   plugins: []
 };
