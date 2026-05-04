@@ -1,0 +1,10 @@
+{
+  "name": "freepdf-apps",
+  "private": true,
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace freepdf-web && node scripts/prepare-vercel-output.mjs"
+  }
+}
