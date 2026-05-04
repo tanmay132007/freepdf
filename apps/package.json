@@ -6,5 +6,10 @@
   ],
   "scripts": {
     "build": "npm run build --workspace freepdf-web && node scripts/prepare-vercel-output.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.0",
+    "react": "^18",
+    "react-dom": "^18"
   }
 }
