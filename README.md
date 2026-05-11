@@ -2,7 +2,7 @@
 
 > 29 free online PDF tools. No installation. No signup required. Files deleted after 1 hour.
 
-**Live Site:** https://apps-freepdf.vercel.app
+**Live Site:** https://freepdf-psi.vercel.app/
 **GitHub:** https://github.com/tanmay132007/freepdf
 
 ---
