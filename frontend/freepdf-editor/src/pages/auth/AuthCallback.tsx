@@ -34,7 +34,7 @@ export default function AuthCallback() {
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center">
       <div className="text-center space-y-4">
-        <Loader2 size={40} className="animate-spin text-red-600 mx-auto" />
+        <Loader2 size={40} className="animate-spin text-emerald-700 mx-auto" />
         <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">Authenticating...</p>
       </div>
     </div>

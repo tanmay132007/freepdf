@@ -19,7 +19,7 @@ export default function Contact() {
   });
 
   useEffect(() => {
-    setMetadata('Contact Us — FreePDF Support', 'Get in touch with the FreePDF team for support, business inquiries, or feedback.');
+    setMetadata('Contact Us — SavePDF Support', 'Get in touch with the SavePDF team for support, business inquiries, or feedback.');
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -41,7 +41,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-red-600/10 text-red-600 rounded-full text-xs font-black uppercase tracking-widest"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-700/10 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest"
           >
             <MessageSquare size={14} /> Get in touch
           </motion.div>
@@ -50,7 +50,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-7xl font-black text-slate-900 font-syne tracking-tight"
           >
-            We're here to <span className="text-red-600">help</span>
+            We're here to <span className="text-emerald-700">help</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -69,8 +69,8 @@ export default function Contact() {
           <div className="space-y-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                { icon: Mail, label: 'Email', value: 'support@freepdf.com', sub: 'Technical support & general' },
-                { icon: MessageSquare, label: 'Sales', value: 'sales@freepdf.com', sub: 'Enterprise & API inquiries' },
+                { icon: Mail, label: 'Email', value: 'support@savepdf.tech', sub: 'Technical support & general' },
+                { icon: MessageSquare, label: 'Sales', value: 'sales@savepdf.tech', sub: 'Enterprise & API inquiries' },
                 { icon: MapPin, label: 'Office', value: 'San Francisco, CA', sub: 'Market St, Suite 1200' },
                 { icon: Phone, label: 'Phone', value: '+1 (555) PDF-FAST', sub: 'Weekdays 9am - 5pm EST' },
               ].map((item, i) => (
@@ -81,7 +81,7 @@ export default function Contact() {
                   transition={{ delay: i * 0.1 }}
                   className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-4 group hover:shadow-xl hover:shadow-slate-200/50 transition-all"
                 >
-                  <div className="h-12 w-12 bg-slate-50 text-slate-400 group-hover:bg-red-600 group-hover:text-white rounded-2xl flex items-center justify-center transition-all mb-4">
+                  <div className="h-12 w-12 bg-slate-50 text-slate-400 group-hover:bg-emerald-700 group-hover:text-white rounded-2xl flex items-center justify-center transition-all mb-4">
                     <item.icon size={20} />
                   </div>
                   <div>
@@ -100,7 +100,7 @@ export default function Contact() {
                 <p className="text-slate-400 font-medium text-sm leading-relaxed">Join our community and stay updated with the latest in document technology and security.</p>
                 <div className="flex gap-4">
                   {[Github, Twitter, Linkedin].map((Icon, i) => (
-                    <button key={i} className="h-12 w-12 bg-white/10 hover:bg-red-600 text-white rounded-2xl flex items-center justify-center transition-all">
+                    <button key={i} className="h-12 w-12 bg-white/10 hover:bg-emerald-700 text-white rounded-2xl flex items-center justify-center transition-all">
                       <Icon size={20} />
                     </button>
                   ))}
@@ -140,7 +140,7 @@ export default function Contact() {
                       placeholder="John Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-4 px-6 rounded-2xl outline-none transition-all font-medium text-slate-900"
+                      className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-4 px-6 rounded-2xl outline-none transition-all font-medium text-slate-900"
                     />
                   </div>
                   <div className="space-y-2">
@@ -151,7 +151,7 @@ export default function Contact() {
                       placeholder="john@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-4 px-6 rounded-2xl outline-none transition-all font-medium text-slate-900"
+                      className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-4 px-6 rounded-2xl outline-none transition-all font-medium text-slate-900"
                     />
                   </div>
                 </div>
@@ -161,7 +161,7 @@ export default function Contact() {
                   <select 
                     value={formData.subject}
                     onChange={(e) => setFormData({...formData, subject: e.target.value})}
-                    className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-4 px-6 rounded-2xl outline-none transition-all font-bold text-slate-700 cursor-pointer"
+                    className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-4 px-6 rounded-2xl outline-none transition-all font-bold text-slate-700 cursor-pointer"
                   >
                     <option>General Inquiry</option>
                     <option>Support Request</option>
@@ -178,13 +178,13 @@ export default function Contact() {
                     placeholder="Tell us how we can help..."
                     value={formData.message}
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-4 px-6 rounded-2xl outline-none transition-all font-medium text-slate-900 resize-none"
+                    className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-4 px-6 rounded-2xl outline-none transition-all font-medium text-slate-900 resize-none"
                   ></textarea>
                 </div>
 
                 <button 
                   disabled={loading}
-                  className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-black uppercase tracking-widest text-xs px-12 py-5 rounded-2xl transition-all shadow-xl shadow-red-200 active:scale-95 flex items-center justify-center gap-3"
+                  className="w-full bg-emerald-700 hover:bg-emerald-800 disabled:bg-emerald-300 text-white font-black uppercase tracking-widest text-xs px-12 py-5 rounded-2xl transition-all shadow-xl shadow-emerald-200 active:scale-95 flex items-center justify-center gap-3"
                 >
                   {loading ? <Loader2 className="animate-spin" size={18} /> : <><Send size={18} /> Send Message</>}
                 </button>

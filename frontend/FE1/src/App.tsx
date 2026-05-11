@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className="bg-primary p-1.5 rounded-lg transition-transform group-hover:scale-110">
             <FileText className="w-5 h-5 text-white" strokeWidth={2.5} />
           </div>
-          <span className="font-syne font-extrabold text-2xl tracking-tighter text-navy text-slate-800">FreePDF</span>
+          <span className="font-syne font-extrabold text-2xl tracking-tighter text-navy text-slate-800">SavePDF</span>
         </Link>
         
         <div className="hidden md:flex items-center gap-10">
@@ -194,7 +194,7 @@ const Hero = () => (
           >
              {/* Mock visual placeholder */}
              <div className="w-full h-full border-2 border-dashed border-slate-200 rounded-2xl flex flex-col items-center justify-center p-12 text-center bg-white shadow-sm">
-                <div className="w-20 h-20 bg-red-50 text-primary rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-20 h-20 bg-emerald-50 text-primary rounded-2xl flex items-center justify-center mb-6">
                    <Upload className="w-10 h-10" />
                 </div>
                 <h3 className="font-bold text-xl mb-2">Drop PDF here</h3>
@@ -276,7 +276,7 @@ const ToolGrid = () => {
 
 const HowItWorks = () => {
   const steps = [
-    { icon: Upload, title: 'Upload your PDF', desc: 'Securely upload your document', color: 'bg-red-50 text-primary' },
+    { icon: Upload, title: 'Upload your PDF', desc: 'Securely upload your document', color: 'bg-emerald-50 text-primary' },
     { icon: Settings, title: 'Choose your tool', desc: 'Select from 29 efficient tasks', color: 'bg-blue-50 text-blue-600' },
     { icon: Download, title: 'Download instantly', desc: 'Get your processed file in seconds', color: 'bg-green-50 text-green-600' }
   ];
@@ -364,7 +364,7 @@ const Footer = () => (
             <div className="bg-primary p-1.5 rounded-lg">
               <FileText className="w-5 h-5 text-white" />
             </div>
-            <span className="font-syne font-black text-2xl text-[#1A1A2E]">FreePDF</span>
+            <span className="font-syne font-black text-2xl text-[#1A1A2E]">SavePDF</span>
           </Link>
           <p className="text-slate-400 text-sm leading-relaxed">
             Revolutionizing document management with AI-first tools. 100% free, forever secure.
@@ -398,7 +398,7 @@ const Footer = () => (
       
       <div className="pt-10 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="text-slate-400 text-[10px] font-black uppercase tracking-widest">
-          © 2026 FreePDF Editor. Built for the speed of web.
+          © 2026 SavePDF Editor. Built for the speed of web.
         </div>
         <div className="flex items-center gap-5 bg-slate-50 px-5 py-2.5 rounded-full border border-slate-100 shadow-sm">
           <div className="flex gap-1.5">

@@ -23,10 +23,10 @@ export function Sidebar() {
     <aside className="w-64 bg-white border-r border-slate-200 flex flex-col h-screen sticky top-0">
       <div className="p-6">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="h-8 w-8 bg-red-600 rounded-lg flex items-center justify-center text-white shadow-lg shadow-red-200 group-hover:rotate-6 transition-all">
+          <div className="h-8 w-8 bg-emerald-700 rounded-lg flex items-center justify-center text-white shadow-lg shadow-emerald-200 group-hover:rotate-6 transition-all">
             <Files size={20} />
           </div>
-          <span className="text-xl font-bold text-slate-800 tracking-tight font-syne">FreePDF</span>
+          <span className="text-xl font-bold text-slate-800 tracking-tight font-syne">SavePDF</span>
         </Link>
       </div>
 
@@ -41,11 +41,11 @@ export function Sidebar() {
               to={item.path}
               className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all group ${
                 isActive 
-                  ? 'bg-red-50 text-red-600 border-l-4 border-red-600 pl-3' 
+                  ? 'bg-emerald-50 text-emerald-700 border-l-4 border-emerald-700 pl-3' 
                   : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'
               }`}
             >
-              <Icon size={18} className={isActive ? 'text-red-600' : 'text-slate-400 group-hover:text-slate-900'} />
+              <Icon size={18} className={isActive ? 'text-emerald-700' : 'text-slate-400 group-hover:text-slate-900'} />
               {item.label}
               {isActive && <ChevronRight size={14} className="ml-auto" />}
             </Link>
@@ -72,7 +72,7 @@ export function Sidebar() {
           
           <button 
             onClick={signOut}
-            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-500 hover:bg-white hover:text-red-600 hover:border-red-100 transition-all"
+            className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl border border-slate-200 text-xs font-bold text-slate-500 hover:bg-white hover:text-emerald-700 hover:border-emerald-100 transition-all"
           >
             <LogOut size={14} />
             Sign Out

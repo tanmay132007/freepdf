@@ -17,10 +17,10 @@ export default function DashboardLayout() {
         {/* Mobile Header */}
         <header className="md:hidden h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 bg-red-600 rounded-lg flex items-center justify-center text-white">
+            <div className="h-8 w-8 bg-emerald-700 rounded-lg flex items-center justify-center text-white">
               <Menu size={20} />
             </div>
-            <span className="font-bold text-slate-800 font-syne">FreePDF</span>
+            <span className="font-bold text-slate-800 font-syne">SavePDF</span>
           </div>
         </header>
 

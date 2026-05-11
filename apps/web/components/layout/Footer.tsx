@@ -3,14 +3,14 @@ import { FileText } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-200 bg-zinc-950 px-6 py-12 text-white">
+    <footer className="border-t border-gold/20 bg-navy px-6 py-12 text-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3 font-bold">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-red-600">
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald">
               <FileText aria-hidden="true" size={20} />
             </span>
-            FreePDF
+            SavePDF
           </div>
           <p className="mt-4 text-sm leading-6 text-white/55">
             Fast online PDF tools with private processing and automatic file

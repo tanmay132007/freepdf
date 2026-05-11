@@ -81,21 +81,21 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
           className={cn(
             "relative group cursor-pointer transition-all duration-300 rounded-[2rem] border-2 border-dashed p-12 text-center",
             isDragActive 
-              ? "border-red-600 bg-red-50/50" 
-              : "border-slate-200 hover:border-red-300 hover:bg-red-50/30",
-            error && "border-red-500 bg-red-50"
+              ? "border-emerald-700 bg-emerald-50/50" 
+              : "border-slate-200 hover:border-emerald-300 hover:bg-emerald-50/30",
+            error && "border-emerald-600 bg-emerald-50"
           )}
         >
           <input {...getInputProps()} />
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className={cn(
               "w-20 h-20 bg-slate-50 rounded-full flex items-center justify-center transition-colors duration-200",
-              isDragActive ? "bg-red-100" : "group-hover:bg-red-100"
+              isDragActive ? "bg-emerald-100" : "group-hover:bg-emerald-100"
             )}>
               <CloudUpload 
                 className={cn(
                   "h-10 w-10 transition-colors duration-200",
-                  isDragActive ? "text-red-600" : "text-slate-300 group-hover:text-red-500"
+                  isDragActive ? "text-emerald-700" : "text-slate-300 group-hover:text-emerald-600"
                 )} 
               />
             </div>
@@ -121,7 +121,7 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
                 <span className="text-xs text-green-600">({formatFileSize(file.size)})</span>
                 <button
                   onClick={() => removeFile(idx)}
-                  className="p-1 hover:bg-green-100 rounded-full text-red-500"
+                  className="p-1 hover:bg-green-100 rounded-full text-emerald-600"
                 >
                   <X className="h-4 w-4" />
                 </button>
@@ -148,14 +148,14 @@ export const FileDropzone: React.FC<FileDropzoneProps> = ({
       )}
 
       {error && (
-        <div className="flex items-center gap-2 text-red-500 bg-red-50 p-4 rounded-xl border border-red-100">
+        <div className="flex items-center gap-2 text-emerald-600 bg-emerald-50 p-4 rounded-xl border border-emerald-100">
           <AlertCircle className="h-5 w-5 shrink-0" />
           <div className="flex-1">
             <p className="font-medium">{error}</p>
           </div>
           <button 
             onClick={() => setError(null)}
-            className="text-sm font-bold bg-white px-3 py-1 rounded-lg shadow-sm border border-red-100"
+            className="text-sm font-bold bg-white px-3 py-1 rounded-lg shadow-sm border border-emerald-100"
           >
             Try again
           </button>

@@ -23,7 +23,7 @@ export const SummaryResult: React.FC<SummaryResultProps> = ({ summary }) => {
       <div className="bg-white rounded-[2rem] border border-slate-200 shadow-xl overflow-hidden">
         <div className="bg-slate-900 p-6 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Sparkles className="h-5 w-5 text-red-500" />
+            <Sparkles className="h-5 w-5 text-emerald-600" />
             <h3 className="text-lg font-bold">AI Summary Results</h3>
           </div>
           <button 
@@ -40,7 +40,7 @@ export const SummaryResult: React.FC<SummaryResultProps> = ({ summary }) => {
             <ul className="space-y-4">
               {parts.map((part, idx) => (
                 <li key={idx} className="flex gap-4 group">
-                  <div className="h-6 w-6 shrink-0 rounded-full bg-white border border-slate-200 text-red-600 flex items-center justify-center text-[10px] font-black shadow-sm mt-0.5">
+                  <div className="h-6 w-6 shrink-0 rounded-full bg-white border border-slate-200 text-emerald-700 flex items-center justify-center text-[10px] font-black shadow-sm mt-0.5">
                     {idx + 1}
                   </div>
                   <p className="text-slate-600 text-sm leading-relaxed group-hover:text-slate-900 transition-colors font-medium">

@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #E63946;
+  --color-primary: #0F8A64;
   --color-navy: #1A1A2E;
   
   --color-slate-50: #f8fafc;
@@ -21,7 +21,7 @@
 
 @layer base {
   body {
-    @apply font-dmSans text-slate-800 bg-white;
+    @apply font-dmSans text-slate-800 bg-[#FCFAF5];
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -34,5 +34,5 @@
 }
 
 .bg-radial-sleek {
-  background: radial-gradient(circle at 70% 20%, rgba(230, 57, 70, 0.08) 0%, transparent 50%);
+  background: radial-gradient(circle at 70% 20%, rgba(15, 138, 100, 0.08) 0%, transparent 50%);
 }

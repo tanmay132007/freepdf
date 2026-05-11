@@ -58,13 +58,13 @@ export default function AdminSidebar() {
         <div className="h-full flex flex-col p-4">
           {/* Logo */}
           <div className={`p-4 mb-8 flex items-center ${isOpen ? 'gap-3' : 'justify-center'}`}>
-            <div className="h-10 w-10 bg-red-600 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-red-900/20">
+            <div className="h-10 w-10 bg-emerald-700 rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-emerald-900/20">
               <span className="text-white font-black text-xl font-syne">F</span>
             </div>
             {isOpen && (
               <div className="animate-fade-in">
-                <p className="text-white font-black font-syne tracking-tighter">FreePDF</p>
-                <p className="text-[9px] font-black uppercase tracking-[0.2em] text-red-500">Admin Panel</p>
+                <p className="text-white font-black font-syne tracking-tighter">SavePDF</p>
+                <p className="text-[9px] font-black uppercase tracking-[0.2em] text-emerald-600">Admin Panel</p>
               </div>
             )}
           </div>
@@ -79,16 +79,16 @@ export default function AdminSidebar() {
                   to={item.path}
                   className={`flex items-center gap-4 p-3 rounded-xl transition-all group ${
                     isActive 
-                      ? 'bg-red-600/10 text-red-500 border border-red-500/10 shadow-lg shadow-red-900/5' 
+                      ? 'bg-emerald-700/10 text-emerald-600 border border-emerald-600/10 shadow-lg shadow-emerald-900/5' 
                       : 'hover:bg-white/5 hover:text-white'
                   }`}
                 >
-                  <item.icon size={20} className={isActive ? 'text-red-500' : 'group-hover:text-white transition-colors'} />
+                  <item.icon size={20} className={isActive ? 'text-emerald-600' : 'group-hover:text-white transition-colors'} />
                   {isOpen && (
                     <span className="text-sm font-bold tracking-tight animate-fade-in">{item.label}</span>
                   )}
                   {isActive && isOpen && (
-                    <motion.div layoutId="active" className="ml-auto w-1.5 h-1.5 bg-red-600 rounded-full" />
+                    <motion.div layoutId="active" className="ml-auto w-1.5 h-1.5 bg-emerald-700 rounded-full" />
                   )}
                 </NavLink>
               );
@@ -107,7 +107,7 @@ export default function AdminSidebar() {
             
             <button 
               onClick={handleLogout}
-              className="w-full flex items-center gap-4 p-3 rounded-xl text-slate-500 hover:bg-red-950/20 hover:text-red-500 transition-all group"
+              className="w-full flex items-center gap-4 p-3 rounded-xl text-slate-500 hover:bg-emerald-950/20 hover:text-emerald-600 transition-all group"
             >
               <LogOut size={20} />
               {isOpen && <span className="text-sm font-bold animate-fade-in">Logout</span>}

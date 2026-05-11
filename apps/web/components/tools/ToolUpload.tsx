@@ -29,7 +29,7 @@ export function ToolUpload({ tool }: ToolUploadProps) {
   const requiresUpload = tool.acceptedFiles.length > 0;
 
   useEffect(() => {
-    setGeminiApiKey(window.localStorage.getItem("freepdf_gemini_api_key") ?? "");
+    setGeminiApiKey(window.localStorage.getItem("savepdf_gemini_api_key") ?? "");
   }, []);
 
   const helperText = useMemo(() => {
@@ -72,7 +72,7 @@ export function ToolUpload({ tool }: ToolUploadProps) {
         url
       };
       if (geminiApiKey) {
-        window.localStorage.setItem("freepdf_gemini_api_key", geminiApiKey);
+        window.localStorage.setItem("savepdf_gemini_api_key", geminiApiKey);
       }
       setStatus(`Processing ${tool.name.toLowerCase()}...`);
       const result = await processClientPdfTool(tool.slug, selectedFiles, options);
@@ -113,7 +113,7 @@ export function ToolUpload({ tool }: ToolUploadProps) {
           disabled={isProcessing}
         />
       ) : (
-        <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+        <div className="rounded-lg border border-gold/25 bg-white p-6 shadow-sm">
           <label className="text-sm font-bold text-navy" htmlFor="tool-url">
             Webpage URL
           </label>
@@ -123,13 +123,13 @@ export function ToolUpload({ tool }: ToolUploadProps) {
             value={url}
             onChange={(event) => setUrl(event.target.value)}
             placeholder="https://example.com"
-            className="mt-3 w-full rounded-md border border-zinc-200 px-4 py-3 outline-none transition focus:border-red-500"
+            className="mt-3 w-full rounded-md border border-gold/25 px-4 py-3 outline-none transition focus:border-emerald"
           />
         </div>
       )}
 
       {usesGemini ? (
-        <div className="mt-5 rounded-lg border border-zinc-200 bg-white p-5 text-left shadow-sm">
+        <div className="mt-5 rounded-lg border border-gold/25 bg-white p-5 text-left shadow-sm">
           <label className="text-sm font-bold text-navy" htmlFor="gemini-key">
             Gemini API key
           </label>
@@ -139,7 +139,7 @@ export function ToolUpload({ tool }: ToolUploadProps) {
             value={geminiApiKey}
             onChange={(event) => setGeminiApiKey(event.target.value)}
             placeholder="AIza..."
-            className="mt-3 w-full rounded-md border border-zinc-200 px-4 py-3 outline-none transition focus:border-red-500"
+            className="mt-3 w-full rounded-md border border-gold/25 px-4 py-3 outline-none transition focus:border-emerald"
           />
           {tool.slug === "translate-pdf" ? (
             <>
@@ -153,7 +153,7 @@ export function ToolUpload({ tool }: ToolUploadProps) {
                 id="target-language"
                 value={language}
                 onChange={(event) => setLanguage(event.target.value)}
-                className="mt-3 w-full rounded-md border border-zinc-200 px-4 py-3 outline-none transition focus:border-red-500"
+                className="mt-3 w-full rounded-md border border-gold/25 px-4 py-3 outline-none transition focus:border-emerald"
               />
             </>
           ) : null}
@@ -166,13 +166,13 @@ export function ToolUpload({ tool }: ToolUploadProps) {
             onChange={(event) => setPrompt(event.target.value)}
             placeholder="Optional custom instruction"
             rows={3}
-            className="mt-3 w-full rounded-md border border-zinc-200 px-4 py-3 outline-none transition focus:border-red-500"
+            className="mt-3 w-full rounded-md border border-gold/25 px-4 py-3 outline-none transition focus:border-emerald"
           />
         </div>
       ) : null}
 
       {["watermark-pdf", "sign-pdf", "edit-pdf"].includes(tool.slug) ? (
-        <div className="mt-5 rounded-lg border border-zinc-200 bg-white p-5 text-left shadow-sm">
+        <div className="mt-5 rounded-lg border border-gold/25 bg-white p-5 text-left shadow-sm">
           <label className="text-sm font-bold text-navy" htmlFor="tool-text">
             Text
           </label>
@@ -187,7 +187,7 @@ export function ToolUpload({ tool }: ToolUploadProps) {
                   ? "Signature name"
                   : "Text to add"
             }
-            className="mt-3 w-full rounded-md border border-zinc-200 px-4 py-3 outline-none transition focus:border-red-500"
+            className="mt-3 w-full rounded-md border border-gold/25 px-4 py-3 outline-none transition focus:border-emerald"
           />
         </div>
       ) : null}
@@ -199,8 +199,8 @@ export function ToolUpload({ tool }: ToolUploadProps) {
       ) : null}
 
       {selectedFiles.length > 0 ? (
-        <div className="mt-5 rounded-lg border border-red-100 bg-red-50 p-4 text-left">
-          <p className="font-semibold text-red-700">
+        <div className="mt-5 rounded-lg border border-emerald/20 bg-emerald/10 p-4 text-left">
+          <p className="font-semibold text-moss">
             {selectedFiles.length} file{selectedFiles.length === 1 ? "" : "s"} ready
             for {tool.name}
           </p>
@@ -211,18 +211,18 @@ export function ToolUpload({ tool }: ToolUploadProps) {
           type="button"
           onClick={handleProcess}
           disabled={isProcessing}
-          className="mt-5 rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:bg-red-300"
+          className="mt-5 rounded-md bg-emerald px-4 py-2 text-sm font-semibold text-white transition hover:bg-moss disabled:cursor-not-allowed disabled:bg-emerald/40"
         >
           {isProcessing ? "Processing..." : `Run ${tool.name}`}
         </button>
       ) : null}
       {status ? (
-        <p className="mt-4 rounded-md border border-zinc-200 bg-white px-4 py-3 text-sm font-semibold text-navy/70">
+        <p className="mt-4 rounded-md border border-gold/25 bg-white px-4 py-3 text-sm font-semibold text-navy/70">
           {status}
         </p>
       ) : null}
       {error ? (
-        <p className="mt-4 rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+        <p className="mt-4 rounded-md border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-semibold text-rose-700">
           {error}
         </p>
       ) : null}

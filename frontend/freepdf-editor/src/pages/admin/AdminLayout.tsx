@@ -39,7 +39,7 @@ export default function AdminLayout() {
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <Loader2 className="animate-spin text-red-600" size={32} />
+        <Loader2 className="animate-spin text-emerald-700" size={32} />
       </div>
     );
   }
@@ -48,7 +48,7 @@ export default function AdminLayout() {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center p-6 text-center">
         <div className="max-w-md space-y-6">
-          <div className="h-20 w-20 bg-red-600/10 text-red-600 rounded-3xl flex items-center justify-center mx-auto">
+          <div className="h-20 w-20 bg-emerald-700/10 text-emerald-700 rounded-3xl flex items-center justify-center mx-auto">
             <ShieldAlert size={40} />
           </div>
           <h1 className="text-3xl font-black text-white font-syne">Access Denied</h1>

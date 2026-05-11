@@ -44,7 +44,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
               onClick={() => updateOption('level', level)}
               className={`flex flex-col items-center gap-2 p-4 rounded-xl border transition-all ${
                 options.level === level 
-                ? 'border-red-600 bg-red-50 text-red-600' 
+                ? 'border-emerald-700 bg-emerald-50 text-emerald-700' 
                 : 'border-navy/10 hover:border-navy/20 text-navy/60'
               }`}
             >
@@ -72,7 +72,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
               onClick={() => updateOption('rotation', angle)}
               className={`flex items-center justify-center gap-3 p-4 rounded-xl border transition-all ${
                 options.rotation === angle 
-                ? 'border-red-600 bg-red-50 text-red-600' 
+                ? 'border-emerald-700 bg-emerald-50 text-emerald-700' 
                 : 'border-navy/10 hover:border-navy/20 text-navy/60'
               }`}
             >
@@ -95,7 +95,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
             value={options.text || ''}
             onChange={(e) => updateOption('text', e.target.value)}
             placeholder="CONFIDENTIAL"
-            className="w-full p-4 rounded-xl border border-navy/10 focus:border-red-500 outline-none transition-all"
+            className="w-full p-4 rounded-xl border border-navy/10 focus:border-emerald-600 outline-none transition-all"
           />
         </div>
         
@@ -108,7 +108,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
             step="10"
             value={options.opacity || 30}
             onChange={(e) => updateOption('opacity', parseInt(e.target.value))}
-            className="w-full accent-red-600"
+            className="w-full accent-emerald-700"
           />
         </div>
 
@@ -117,7 +117,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
           <select
             value={options.position || 'center'}
             onChange={(e) => updateOption('position', e.target.value)}
-            className="w-full p-4 rounded-xl border border-navy/10 focus:border-red-500 outline-none transition-all appearance-none"
+            className="w-full p-4 rounded-xl border border-navy/10 focus:border-emerald-600 outline-none transition-all appearance-none"
           >
             <option value="center">Center</option>
             <option value="top-left">Top-left</option>
@@ -141,7 +141,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
               type={showPass ? 'text' : 'password'}
               value={options.password || ''}
               onChange={(e) => updateOption('password', e.target.value)}
-              className="w-full p-4 rounded-xl border border-navy/10 focus:border-red-500 outline-none"
+              className="w-full p-4 rounded-xl border border-navy/10 focus:border-emerald-600 outline-none"
             />
             <button 
               onClick={() => setShowPass(!showPass)}
@@ -156,7 +156,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
           <label className="flex items-center gap-3 cursor-pointer">
             <input 
               type="checkbox" 
-              className="h-5 w-5 accent-red-600 rounded" 
+              className="h-5 w-5 accent-emerald-700 rounded" 
               onChange={(e) => updateOption('allowPrinting', e.target.checked)}
             />
             <span className="text-sm font-medium text-navy/70">Allow printing</span>
@@ -164,7 +164,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
           <label className="flex items-center gap-3 cursor-pointer">
             <input 
               type="checkbox" 
-              className="h-5 w-5 accent-red-600 rounded" 
+              className="h-5 w-5 accent-emerald-700 rounded" 
               onChange={(e) => updateOption('allowCopying', e.target.checked)}
             />
             <span className="text-sm font-medium text-navy/70">Allow copying content</span>
@@ -182,7 +182,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
           type="password"
           value={options.password || ''}
           onChange={(e) => updateOption('password', e.target.value)}
-          className="w-full p-4 rounded-xl border border-navy/10 focus:border-red-500 outline-none"
+          className="w-full p-4 rounded-xl border border-navy/10 focus:border-emerald-600 outline-none"
         />
         <p className="text-xs text-navy/40">Enter the current PDF password to remove protection</p>
       </div>
@@ -197,7 +197,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
             onClick={() => updateOption('mode', 'all')}
             className={`p-4 rounded-xl border flex flex-col items-center gap-2 transition-all ${
               options.mode === 'all' 
-              ? 'border-red-600 bg-red-50 text-red-600' 
+              ? 'border-emerald-700 bg-emerald-50 text-emerald-700' 
               : 'border-navy/10 text-navy/60'
             }`}
           >
@@ -208,7 +208,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
             onClick={() => updateOption('mode', 'custom')}
             className={`p-4 rounded-xl border flex flex-col items-center gap-2 transition-all ${
               options.mode === 'custom' 
-              ? 'border-red-600 bg-red-50 text-red-600' 
+              ? 'border-emerald-700 bg-emerald-50 text-emerald-700' 
               : 'border-navy/10 text-navy/60'
             }`}
           >
@@ -223,7 +223,7 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
             <input
               type="text"
               placeholder="e.g. 1-3, 5, 7-9"
-              className="w-full p-4 rounded-xl border border-navy/10 focus:border-red-500 outline-none"
+              className="w-full p-4 rounded-xl border border-navy/10 focus:border-emerald-600 outline-none"
               onChange={(e) => updateOption('ranges', e.target.value)}
             />
           </div>
@@ -240,13 +240,13 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
     return (
       <div className="space-y-4 p-6 bg-white rounded-2xl border border-navy/5 shadow-sm">
         <div className="flex items-center gap-2 text-sm font-bold text-navy uppercase tracking-wider">
-          <Languages className="h-4 w-4 text-red-500" />
+          <Languages className="h-4 w-4 text-emerald-600" />
           Target Language
         </div>
         <select
           value={options.target || 'Spanish'}
           onChange={(e) => updateOption('target', e.target.value)}
-          className="w-full p-4 rounded-xl border border-navy/10 focus:border-red-500 outline-none appearance-none"
+          className="w-full p-4 rounded-xl border border-navy/10 focus:border-emerald-600 outline-none appearance-none"
         >
           {languages.map(lang => (
             <option key={lang} value={lang}>{lang}</option>
@@ -258,13 +258,13 @@ export const ToolOptions: React.FC<ToolOptionsProps> = ({ slug, onChange }) => {
 
   if (slug === 'ai-summarizer') {
     return (
-      <div className="p-6 bg-red-50 rounded-2xl border border-red-100 flex gap-4">
-        <div className="h-12 w-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-red-600 shadow-sm">
+      <div className="p-6 bg-emerald-50 rounded-2xl border border-emerald-100 flex gap-4">
+        <div className="h-12 w-12 shrink-0 bg-white rounded-xl flex items-center justify-center text-emerald-700 shadow-sm">
           <Sparkles className="h-6 w-6" />
         </div>
         <div>
-          <h4 className="font-bold text-red-900">AI Intelligent Summary</h4>
-          <p className="text-sm text-red-800/70 leading-relaxed">
+          <h4 className="font-bold text-emerald-950">AI Intelligent Summary</h4>
+          <p className="text-sm text-emerald-900/70 leading-relaxed">
             AI will extract and summarize the key points from your PDF using Gemini AI. 
             Perfect for long research papers, legal documents, or complex reports.
           </p>

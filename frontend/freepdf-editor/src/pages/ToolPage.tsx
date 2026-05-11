@@ -40,7 +40,7 @@ export const ToolPage: React.FC = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-4">
         <h1 className="text-4xl font-bold text-navy mb-4">Tool Not Found</h1>
-        <Link to="/" className="text-red-600 font-bold hover:underline">Go back home</Link>
+        <Link to="/" className="text-emerald-700 font-bold hover:underline">Go back home</Link>
       </div>
     )
   }
@@ -77,7 +77,7 @@ export const ToolPage: React.FC = () => {
                       
                       <button 
                         onClick={handleStart}
-                        className="w-full bg-red-600 hover:bg-red-700 text-white rounded-2xl font-bold py-4 px-8 shadow-lg shadow-red-200 flex items-center justify-center space-x-2 transition-all transform hover:scale-[1.01] active:scale-[0.99]"
+                        className="w-full bg-emerald-700 hover:bg-emerald-800 text-white rounded-2xl font-bold py-4 px-8 shadow-lg shadow-emerald-200 flex items-center justify-center space-x-2 transition-all transform hover:scale-[1.01] active:scale-[0.99]"
                       >
                         <span>Process {tool.name} with AI</span>
                         <Play className="h-5 w-5 fill-current" />
@@ -109,7 +109,7 @@ export const ToolPage: React.FC = () => {
               {status === 'completed' && tool.slug !== 'ai-summarizer' && (
                 <DownloadButton 
                   downloadUrl={downloadUrl || ''} 
-                  filename={`freepdf-${tool.slug}.pdf`} 
+                  filename={`savepdf-${tool.slug}.pdf`} 
                 />
               )}
               
@@ -138,14 +138,14 @@ export const ToolPage: React.FC = () => {
 
             <div className="bg-slate-900 rounded-2xl p-8 text-white overflow-hidden relative group">
               <div className="relative z-10">
-                <span className="text-[10px] bg-red-600 px-2.5 py-1 rounded-full mb-3 inline-block font-black tracking-widest leading-none">PRO FEATURE</span>
+                <span className="text-[10px] bg-emerald-700 px-2.5 py-1 rounded-full mb-3 inline-block font-black tracking-widest leading-none">PRO FEATURE</span>
                 <h4 className="text-xl font-bold mb-1">Unlock Unlimited Power</h4>
                 <p className="text-xs text-slate-400 mb-6 leading-relaxed font-medium">Summarize documents up to 500MB and unlimited pages with Pro.</p>
                 <Link to="/pricing" className="block w-full py-3 bg-white text-slate-900 rounded-xl text-xs font-bold text-center hover:bg-slate-100 transition-colors">Upgrade to Pro</Link>
               </div>
               {/* Decorative circles */}
-              <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-red-600 opacity-20 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
-              <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-red-600 opacity-10 rounded-full group-hover:scale-125 transition-transform duration-700"></div>
+              <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-emerald-700 opacity-20 rounded-full group-hover:scale-110 transition-transform duration-500"></div>
+              <div className="absolute -right-8 -bottom-8 w-24 h-24 bg-emerald-700 opacity-10 rounded-full group-hover:scale-125 transition-transform duration-700"></div>
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ const postsData: Record<string, string> = {
 title: How to Compress PDF Without Losing Quality
 description: Learn the best techniques to reduce PDF file size while keeping images sharp and text crisp.
 date: 2026-04-15
-author: FreePDF Team
+author: SavePDF Team
 category: Tutorial
 ---
 
@@ -38,16 +38,16 @@ Large PDFs consume storage, slow down website loading times, and are often rejec
 2. **Recommended Compression**: The sweet spot. Good size reduction with high visual quality. Most users should choose this.
 3. **Less Compression**: High quality, low size reduction. Best if you have high-resolution photography.
 
-### Step by Step Guide using FreePDF
+### Step by Step Guide using SavePDF
 
-1. **Select the Compress Tool**: Navigate to the "Compress PDF" tool on FreePDF.
+1. **Select the Compress Tool**: Navigate to the "Compress PDF" tool on SavePDF.
 2. **Upload your File**: Drag and drop your PDF into the upload zone.
 3. **Choose Quality**: Select from the three levels mentioned above.
 4. **Download**: Our server processes the file in seconds and provides a smaller version immediately.
 
 ### Tips for Best Results
 
-Always keep your original file. While FreePDF uses advanced algorithms, extreme compression is permanent once the file is saved. Also, ensure your PDF isn't already password-protected, as encrypted files cannot be compressed without the owner password.
+Always keep your original file. While SavePDF uses advanced algorithms, extreme compression is permanent once the file is saved. Also, ensure your PDF isn't already password-protected, as encrypted files cannot be compressed without the owner password.
 
 ### Common Mistakes to Avoid
 
@@ -58,7 +58,7 @@ Don't compress multiple times. Compressing an already compressed file often yiel
 title: The Complete Guide to Converting PDF to Word
 description: Everything you need to know about converting PDF files to editable Word documents.
 date: 2026-04-20
-author: FreePDF Team
+author: SavePDF Team
 category: Guide
 ---
 
@@ -68,13 +68,13 @@ We have all been there: you have a PDF document that needs a quick edit, but you
 
 Conversion is ideal for resumes, contracts, and reports where you need to change text, swap images, or update formatting. Instead of retyping the entire document, conversion preserves the layout while unlocking the content.
 
-### How FreePDF Handles Conversion
+### How SavePDF Handles Conversion
 
-FreePDF uses advanced OCR (Optical Character Recognition) and layout engine technology. Our engine analyzes the PDF's structure, identifying headers, footers, tables, and paragraphs to ensure the resulting Word document feels native and easy to edit.
+SavePDF uses advanced OCR (Optical Character Recognition) and layout engine technology. Our engine analyzes the PDF's structure, identifying headers, footers, tables, and paragraphs to ensure the resulting Word document feels native and easy to edit.
 
 ### Dealing with Scanned PDFs (OCR)
 
-If your PDF is just a "picture of text" (a scan), standard conversion won't work. You need OCR. FreePDF's Pro engine detects these images and runs character recognition to turn those pixels back into editable letters.
+If your PDF is just a "picture of text" (a scan), standard conversion won't work. You need OCR. SavePDF's Pro engine detects these images and runs character recognition to turn those pixels back into editable letters.
 
 ### Formatting Tips after Conversion
 
@@ -82,14 +82,14 @@ While we strive for 100% accuracy, complex PDFs with many layers might require m
 
 ### Free vs Paid Conversion Tools
 
-Many "free" tools online add watermarks or limit the number of pages. FreePDF offers high-quality conversion for free, with Pro tiers unlocking batch processing and advanced OCR for large, complex archives.
+Many "free" tools online add watermarks or limit the number of pages. SavePDF offers high-quality conversion for free, with Pro tiers unlocking batch processing and advanced OCR for large, complex archives.
 `,
 
   'how-to-protect-pdf-with-password': `---
 title: How to Password Protect Your PDF Files
 description: A step-by-step guide to adding password protection to your PDF documents for maximum security.
 date: 2026-04-25
-author: FreePDF Team
+author: SavePDF Team
 category: Security
 ---
 
@@ -104,7 +104,7 @@ Confidential contracts, financial statements, and personal IDs should never be s
 - **User Password (Open Password)**: Required to simply view the document.
 - **Owner Password (Permissions Password)**: Required to change permissions, such as printing, copying text, or editing.
 
-### Step by Step with FreePDF
+### Step by Step with SavePDF
 
 1. **Go to Protect PDF**: Select the tool from our home page.
 2. **Upload**: Drag your sensitive file into the browser.
@@ -113,18 +113,18 @@ Confidential contracts, financial statements, and personal IDs should never be s
 
 ### Best Practices for PDF Passwords
 
-Avoid using "123456" or your name. Use a passphrase with a mix of symbols and numbers. Remember, if you lose the password, FreePDF cannot recover it for you as we do not store your passwords for privacy reasons.
+Avoid using "123456" or your name. Use a passphrase with a mix of symbols and numbers. Remember, if you lose the password, SavePDF cannot recover it for you as we do not store your passwords for privacy reasons.
 
 ### How to Remove Password Later
 
-If you no longer need protection, you can use the "Unlock PDF" tool on FreePDF. You will be required to enter the current password one last time to remove the encryption indefinitely.
+If you no longer need protection, you can use the "Unlock PDF" tool on SavePDF. You will be required to enter the current password one last time to remove the encryption indefinitely.
 `,
 
   'best-free-pdf-tools-2026': `---
 title: 10 Best Free PDF Tools in 2026
-description: Compare the best free PDF tools available online including FreePDF, Smallpdf, iLovePDF and more.
+description: Compare the best free PDF tools available online including SavePDF, Smallpdf, iLovePDF and more.
 date: 2026-05-01
-author: FreePDF Team
+author: SavePDF Team
 category: Comparison
 ---
 
@@ -142,32 +142,32 @@ When choosing a platform, consider:
 
 | Tool | Privacy | Speed | Tools | Price |
 | :--- | :--- | :--- | :--- | :--- |
-| **FreePDF** | Excellent | Super Fast | 29+ | Free / $12 |
+| **SavePDF** | Excellent | Super Fast | 29+ | Free / $12 |
 | **SmallPDF** | Good | Fast | 21 | $10 |
 | **iLovePDF** | Good | Average | 24 | $7 |
 | **PDF2Go** | Average | Slow | 18 | $6 |
 | **SodaPDF** | Average | Fast | 20 | $15 |
 
-### FreePDF Advantages
+### SavePDF Advantages
 
-FreePDF stands out in 2026 for its "Privacy First" approach. We utilize edge computing to process smaller files entirely in your browser, and our cloud servers for large files feature auto-deletion every 60 minutes.
+SavePDF stands out in 2026 for its "Privacy First" approach. We utilize edge computing to process smaller files entirely in your browser, and our cloud servers for large files feature auto-deletion every 60 minutes.
 
 ### Which Tool for Which Task?
 
 - **Simple Merging**: Any tool works.
-- **OCR Conversion**: FreePDF or Adobe Acrobat.
-- **AI Analysis**: FreePDF AI Summarizer is best-in-class in 2026.
+- **OCR Conversion**: SavePDF or Adobe Acrobat.
+- **AI Analysis**: SavePDF AI Summarizer is best-in-class in 2026.
 
 ### Final Recommendation
 
-For daily users who value speed and privacy, FreePDF is the clear winner for 2026. It offers the widest range of free features without the aggressive "paywall" interruptions common in other tools.
+For daily users who value speed and privacy, SavePDF is the clear winner for 2026. It offers the widest range of free features without the aggressive "paywall" interruptions common in other tools.
 `,
 
   'how-to-merge-pdf-files': `---
 title: How to Merge Multiple PDF Files Into One
 description: Simple guide to combining multiple PDF documents into a single file using free online tools.
 date: 2026-05-03
-author: FreePDF Team
+author: SavePDF Team
 category: Tutorial
 ---
 
@@ -181,7 +181,7 @@ Common scenarios include:
 - Preparing legal discovery documents.
 - Combining monthly financial statements into an annual report.
 
-### Step by Step Merge Guide with FreePDF
+### Step by Step Merge Guide with SavePDF
 
 1. **Open Merge Tool**: Click "Merge PDF" on our dashboard or home page.
 2. **Add Files**: You can add dozens of files at once.
@@ -190,7 +190,7 @@ Common scenarios include:
 
 ### Reordering Pages Before Merging
 
-FreePDF goes beyond simple merging. Once you upload your files, you can expand a document to see individual pages and delete unnecessary ones before the final merge, saving you the step of using a separate "Split" tool.
+SavePDF goes beyond simple merging. Once you upload your files, you can expand a document to see individual pages and delete unnecessary ones before the final merge, saving you the step of using a separate "Split" tool.
 
 ### File Size Considerations
 
@@ -198,7 +198,7 @@ Merging many high-quality files can result in a very large output PDF. If your f
 
 ### Alternative Methods
 
-While desktop programs like Preview (Mac) or Adobe Acrobat (PC) can merge files, they are often cumbersome. Online tools like FreePDF offer a visual, drag-and-drop experience that is significantly more intuitive for non-technical users.
+While desktop programs like Preview (Mac) or Adobe Acrobat (PC) can merge files, they are often cumbersome. Online tools like SavePDF offer a visual, drag-and-drop experience that is significantly more intuitive for non-technical users.
 `
 };
 

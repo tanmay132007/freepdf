@@ -39,17 +39,17 @@ export default function Overview() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 tracking-tight font-syne">
-            Welcome back, <span className="text-red-600">{profile?.full_name?.split(' ')[0] || 'User'}</span>!
+            Welcome back, <span className="text-emerald-700">{profile?.full_name?.split(' ')[0] || 'User'}</span>!
           </h1>
           <p className="text-slate-500 font-medium">Here's what's happening with your PDF tools today.</p>
         </div>
         <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-2xl border border-slate-200 shadow-sm self-start">
-          <div className={`h-2 w-2 rounded-full ${plan?.name ? 'bg-red-500 animate-pulse' : 'bg-slate-300'}`}></div>
+          <div className={`h-2 w-2 rounded-full ${plan?.name ? 'bg-emerald-600 animate-pulse' : 'bg-slate-300'}`}></div>
           <span className="text-xs font-black uppercase tracking-widest text-slate-700">
             {plan?.name || 'Free Plan'}
           </span>
           {(!plan || plan.name === 'Free') && (
-            <Link to="/pricing" className="ml-2 text-[10px] font-black uppercase tracking-widest text-red-600 hover:underline">
+            <Link to="/pricing" className="ml-2 text-[10px] font-black uppercase tracking-widest text-emerald-700 hover:underline">
               Upgrade
             </Link>
           )}
@@ -59,7 +59,7 @@ export default function Overview() {
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { label: 'Operations Today', value: `${stats.opsToday} / ${stats.opsLimit}`, icon: Zap, color: 'text-red-600', bg: 'bg-red-50' },
+          { label: 'Operations Today', value: `${stats.opsToday} / ${stats.opsLimit}`, icon: Zap, color: 'text-emerald-700', bg: 'bg-emerald-50' },
           { label: 'Files Stored', value: stats.filesStored, icon: Files, color: 'text-blue-600', bg: 'bg-blue-50' },
           { label: 'Storage Used', value: `${stats.storageUsed} MB`, icon: HardDrive, color: 'text-purple-600', bg: 'bg-purple-50' },
           { label: 'Current Plan', value: plan?.name || 'Free', icon: CreditCard, color: 'text-green-600', bg: 'bg-green-50' },
@@ -88,7 +88,7 @@ export default function Overview() {
             <p className="text-xs text-slate-400 font-medium">You have used {stats.opsToday} out of your {stats.opsLimit} daily operations.</p>
           </div>
           {(!plan || plan.name === 'Free') && (
-            <Link to="/pricing" className="hidden sm:flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-xl text-xs font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-100">
+            <Link to="/pricing" className="hidden sm:flex items-center gap-2 px-4 py-2 bg-emerald-700 text-white rounded-xl text-xs font-bold hover:bg-emerald-800 transition-all shadow-lg shadow-emerald-100">
               Upgrade for Unlimited <ArrowUpRight size={14} />
             </Link>
           )}
@@ -97,11 +97,11 @@ export default function Overview() {
           <motion.div 
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            className={`h-full transition-all ${isHighUsage ? 'bg-red-500' : 'bg-red-600'}`}
+            className={`h-full transition-all ${isHighUsage ? 'bg-emerald-600' : 'bg-emerald-700'}`}
           ></motion.div>
         </div>
         {isHighUsage && (
-          <p className="mt-3 text-[10px] font-bold text-red-500 uppercase tracking-widest flex items-center gap-1">
+          <p className="mt-3 text-[10px] font-bold text-emerald-600 uppercase tracking-widest flex items-center gap-1">
             <Sparkles size={10} /> Running low on daily operations! Consider upgrading.
           </p>
         )}
@@ -112,7 +112,7 @@ export default function Overview() {
         <div className="lg:col-span-2 space-y-6">
           <div className="flex items-center justify-between">
             <h3 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">Recent Operations</h3>
-            <Link to="/dashboard/history" className="text-xs font-bold text-red-600 hover:underline flex items-center gap-1">
+            <Link to="/dashboard/history" className="text-xs font-bold text-emerald-700 hover:underline flex items-center gap-1">
               View History <ArrowRight size={14} />
             </Link>
           </div>
@@ -137,7 +137,7 @@ export default function Overview() {
                   <tr key={i} className="hover:bg-slate-50 transition-colors group">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 group-hover:bg-red-50 group-hover:text-red-600 transition-all">
+                        <div className="h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-all">
                           <Files size={14} />
                         </div>
                         <span className="text-sm font-bold text-slate-900">{op.tool}</span>
@@ -145,7 +145,7 @@ export default function Overview() {
                     </td>
                     <td className="px-6 py-4">
                       <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
-                        op.status === 'completed' ? 'bg-green-50 text-green-600' : 'bg-red-50 text-red-600'
+                        op.status === 'completed' ? 'bg-green-50 text-green-600' : 'bg-emerald-50 text-emerald-700'
                       }`}>
                         {op.status}
                       </span>
@@ -153,7 +153,7 @@ export default function Overview() {
                     <td className="px-6 py-4 text-xs font-medium text-slate-400">{op.date}</td>
                     <td className="px-6 py-4 text-right">
                       {op.status === 'completed' && (
-                        <button className="p-2 hover:bg-slate-100 rounded-lg text-slate-400 hover:text-red-600 transition-all">
+                        <button className="p-2 hover:bg-slate-100 rounded-lg text-slate-400 hover:text-emerald-700 transition-all">
                           <Download size={16} />
                         </button>
                       )}
@@ -175,9 +175,9 @@ export default function Overview() {
                 <Link 
                   key={tool.slug}
                   to={`/tools/${tool.slug}`}
-                  className="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:border-red-200 hover:shadow-md transition-all group text-center space-y-3"
+                  className="bg-white p-4 rounded-2xl border border-slate-100 shadow-sm hover:border-emerald-200 hover:shadow-md transition-all group text-center space-y-3"
                 >
-                  <div className="h-10 w-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 mx-auto group-hover:bg-red-600 group-hover:text-white transition-all transform group-hover:scale-110">
+                  <div className="h-10 w-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 mx-auto group-hover:bg-emerald-700 group-hover:text-white transition-all transform group-hover:scale-110">
                     <Icon size={18} />
                   </div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-slate-600 group-hover:text-slate-900 truncate">

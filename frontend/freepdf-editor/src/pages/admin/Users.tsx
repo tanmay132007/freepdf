@@ -73,7 +73,7 @@ export default function AdminUsers() {
           <h1 className="text-3xl font-black text-slate-900 font-syne tracking-tight">User Management</h1>
           <p className="text-sm font-medium text-slate-400">Manage memberships, roles, and platform access.</p>
         </div>
-        <button className="flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-red-700 transition-all active:scale-95 shadow-xl shadow-red-200">
+        <button className="flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-emerald-800 transition-all active:scale-95 shadow-xl shadow-emerald-200">
           <UserPlus size={16} /> New User
         </button>
       </div>
@@ -136,7 +136,7 @@ export default function AdminUsers() {
                   <td className="px-8 py-6">
                     <div className="space-y-1.5">
                       <span className={`px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-widest ${
-                        user.plan === 'Pro' ? 'bg-red-100 text-red-600' : 
+                        user.plan === 'Pro' ? 'bg-emerald-100 text-emerald-700' : 
                         user.plan === 'Business' ? 'bg-purple-100 text-purple-600' : 
                         'bg-slate-100 text-slate-400'
                       }`}>
@@ -170,13 +170,13 @@ export default function AdminUsers() {
                     <div className="flex items-center justify-end gap-2">
                       <button 
                         onClick={() => handleEditClick(user)}
-                        className="p-2.5 bg-slate-50 text-slate-400 hover:bg-white hover:text-red-600 hover:shadow-lg transition-all rounded-xl border border-transparent hover:border-red-100"
+                        className="p-2.5 bg-slate-50 text-slate-400 hover:bg-white hover:text-emerald-700 hover:shadow-lg transition-all rounded-xl border border-transparent hover:border-emerald-100"
                       >
                         <Edit2 size={14} />
                       </button>
                       <button 
                         onClick={() => handleDeleteClick(user)}
-                        className="p-2.5 bg-slate-50 text-slate-400 hover:bg-red-600 hover:text-white hover:shadow-lg transition-all rounded-xl"
+                        className="p-2.5 bg-slate-50 text-slate-400 hover:bg-emerald-700 hover:text-white hover:shadow-lg transition-all rounded-xl"
                       >
                         <Trash2 size={14} />
                       </button>
@@ -195,7 +195,7 @@ export default function AdminUsers() {
             <button className="p-2 border border-slate-100 rounded-lg text-slate-300 cursor-not-allowed">
               <ChevronLeft size={16} />
             </button>
-            <button className="p-2 bg-white border border-slate-200 rounded-lg text-slate-600 hover:border-red-600 hover:text-red-600 transition-colors">
+            <button className="p-2 bg-white border border-slate-200 rounded-lg text-slate-600 hover:border-emerald-700 hover:text-emerald-700 transition-colors">
               <ChevronRight size={16} />
             </button>
           </div>
@@ -231,7 +231,7 @@ export default function AdminUsers() {
                     <select 
                       value={selectedUser.plan}
                       onChange={(e) => setSelectedUser({...selectedUser, plan: e.target.value as any})}
-                      className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-red-600 py-4 px-6 rounded-2xl outline-none font-bold text-slate-700 cursor-pointer"
+                      className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-emerald-700 py-4 px-6 rounded-2xl outline-none font-bold text-slate-700 cursor-pointer"
                     >
                       <option value="Free">Free Tier</option>
                       <option value="Pro">Pro Membership</option>
@@ -244,7 +244,7 @@ export default function AdminUsers() {
                     <select 
                       value={selectedUser.role}
                       onChange={(e) => setSelectedUser({...selectedUser, role: e.target.value as any})}
-                      className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-red-600 py-4 px-6 rounded-2xl outline-none font-bold text-slate-700 cursor-pointer"
+                      className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-emerald-700 py-4 px-6 rounded-2xl outline-none font-bold text-slate-700 cursor-pointer"
                     >
                       <option value="user">Standard User</option>
                       <option value="admin">Platform Administrator</option>
@@ -261,7 +261,7 @@ export default function AdminUsers() {
                           onClick={() => setSelectedUser({...selectedUser, status: status as any})}
                           className={`flex-1 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all ${
                             selectedUser.status === status 
-                              ? (status === 'active' ? 'bg-green-600 text-white shadow-lg shadow-green-200' : 'bg-red-600 text-white shadow-lg shadow-red-200')
+                              ? (status === 'active' ? 'bg-green-600 text-white shadow-lg shadow-green-200' : 'bg-emerald-700 text-white shadow-lg shadow-emerald-200')
                               : 'bg-slate-50 text-slate-400'
                           }`}
                         >
@@ -298,7 +298,7 @@ export default function AdminUsers() {
               exit={{ opacity: 0, scale: 0.95 }}
               className="relative w-full max-w-md bg-white rounded-[2.5rem] p-10 text-center space-y-8"
             >
-              <div className="h-20 w-20 bg-red-100 text-red-600 rounded-3xl flex items-center justify-center mx-auto">
+              <div className="h-20 w-20 bg-emerald-100 text-emerald-700 rounded-3xl flex items-center justify-center mx-auto">
                 <AlertTriangle size={40} />
               </div>
               <div className="space-y-2">
@@ -316,7 +316,7 @@ export default function AdminUsers() {
                 </button>
                 <button 
                   onClick={deleteUser}
-                  className="flex-1 py-4 bg-red-600 text-white rounded-2xl font-black uppercase tracking-widest text-[10px] hover:bg-red-700 transition-all shadow-xl shadow-red-200"
+                  className="flex-1 py-4 bg-emerald-700 text-white rounded-2xl font-black uppercase tracking-widest text-[10px] hover:bg-emerald-800 transition-all shadow-xl shadow-emerald-200"
                 >
                   Yes, Delete
                 </button>

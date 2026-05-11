@@ -17,7 +17,7 @@ const revenueStats = [
   { label: 'Monthly Recurring (MRR)', value: '$124,802', trend: '+14.2%', isUp: true, icon: TrendingUp, color: 'text-green-600', bg: 'bg-green-50' },
   { label: 'Total Revenue (LTV)', value: '$1.2M', trend: '+8.1%', isUp: true, icon: DollarSign, color: 'text-blue-600', bg: 'bg-blue-50' },
   { label: 'Active Subscriptions', value: '3,492', trend: '+2.4%', isUp: true, icon: CreditCard, color: 'text-purple-600', bg: 'bg-purple-50' },
-  { label: 'Churn Rate (Monthly)', value: '1.2%', trend: '-0.4%', isUp: false, icon: Users, color: 'text-red-600', bg: 'bg-red-50' },
+  { label: 'Churn Rate (Monthly)', value: '1.2%', trend: '-0.4%', isUp: false, icon: Users, color: 'text-emerald-700', bg: 'bg-emerald-50' },
 ];
 
 const revenueData = [
@@ -28,7 +28,7 @@ const revenueData = [
 
 const planDistribution = [
   { name: 'Free', value: 45000, color: '#94a3b8' },
-  { name: 'Pro', value: 3100, color: '#dc2626' },
+  { name: 'Pro', value: 3100, color: '#0F8A64' },
   { name: 'Business', value: 392, color: '#7c3aed' },
 ];
 
@@ -69,7 +69,7 @@ export default function AdminRevenue() {
               <div className={`h-12 w-12 ${stat.bg} ${stat.color} rounded-2xl flex items-center justify-center shadow-sm`}>
                 <stat.icon size={20} />
               </div>
-              <div className={`flex items-center gap-1 font-black text-[10px] uppercase tracking-widest ${stat.isUp ? 'text-green-500' : 'text-red-500'}`}>
+              <div className={`flex items-center gap-1 font-black text-[10px] uppercase tracking-widest ${stat.isUp ? 'text-green-500' : 'text-emerald-600'}`}>
                 {stat.isUp ? <ArrowUpRight size={14} /> : <ArrowDownRight size={14} />} {stat.trend}
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function AdminRevenue() {
           <div className="flex items-center justify-between">
             <h3 className="text-2xl font-black text-slate-900 font-syne tracking-tight">Revenue Trajectory (30d)</h3>
             <div className="flex items-center gap-3 bg-slate-50 p-1.5 rounded-xl">
-              <button className="px-4 py-2 bg-white text-red-600 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm">Daily</button>
+              <button className="px-4 py-2 bg-white text-emerald-700 rounded-lg text-[10px] font-black uppercase tracking-widest shadow-sm">Daily</button>
               <button className="px-4 py-2 text-slate-400 text-[10px] font-black uppercase tracking-widest">Monthly</button>
             </div>
           </div>
@@ -96,8 +96,8 @@ export default function AdminRevenue() {
               <AreaChart data={revenueData}>
                 <defs>
                   <linearGradient id="colorRev" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#dc2626" stopOpacity={0.15}/>
-                    <stop offset="95%" stopColor="#dc2626" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#0F8A64" stopOpacity={0.15}/>
+                    <stop offset="95%" stopColor="#0F8A64" stopOpacity={0}/>
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
@@ -117,7 +117,7 @@ export default function AdminRevenue() {
                   contentStyle={{ borderRadius: '24px', border: 'none', boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1)', padding: '20px' }}
                   itemStyle={{ fontWeight: 800, textTransform: 'uppercase', fontSize: '10px' }}
                 />
-                <Area type="monotone" dataKey="rev" stroke="#dc2626" strokeWidth={4} fillOpacity={1} fill="url(#colorRev)" />
+                <Area type="monotone" dataKey="rev" stroke="#0F8A64" strokeWidth={4} fillOpacity={1} fill="url(#colorRev)" />
               </AreaChart>
             </ResponsiveContainer>
           </div>
@@ -193,11 +193,11 @@ export default function AdminRevenue() {
               {recentPayments.map((pay, i) => (
                 <tr key={i} className="group hover:bg-slate-50 transition-colors">
                   <td className="px-8 py-5">
-                    <span className="text-sm font-black text-slate-900 group-hover:text-red-600 transition-colors">{pay.user}</span>
+                    <span className="text-sm font-black text-slate-900 group-hover:text-emerald-700 transition-colors">{pay.user}</span>
                   </td>
                   <td className="px-8 py-5">
                     <span className={`px-2 py-0.5 rounded-lg text-[9px] font-black uppercase tracking-widest ${
-                      pay.plan === 'Pro' ? 'bg-red-100 text-red-600' : 'bg-purple-100 text-purple-600'
+                      pay.plan === 'Pro' ? 'bg-emerald-100 text-emerald-700' : 'bg-purple-100 text-purple-600'
                     }`}>
                       {pay.plan}
                     </span>
@@ -212,7 +212,7 @@ export default function AdminRevenue() {
                     <span className={`px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
                       pay.status === 'Success' ? 'bg-green-100 text-green-700' :
                       pay.status === 'Pending' ? 'bg-amber-100 text-amber-700' :
-                      'bg-red-100 text-red-700 shadow-sm'
+                      'bg-emerald-100 text-emerald-800 shadow-sm'
                     }`}>
                       {pay.status}
                     </span>

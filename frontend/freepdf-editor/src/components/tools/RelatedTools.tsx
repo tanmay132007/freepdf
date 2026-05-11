@@ -20,7 +20,7 @@ export const RelatedTools: React.FC<RelatedToolsProps> = ({ currentSlug, categor
     <div className="pt-20 space-y-8">
       <div className="flex items-center justify-between">
         <h3 className="text-2xl font-bold text-navy">You might also like</h3>
-        <Link to="/tools" className="text-sm font-bold text-red-600 hover:underline flex items-center gap-1">
+        <Link to="/tools" className="text-sm font-bold text-emerald-700 hover:underline flex items-center gap-1">
           View all tools <ArrowRight size={14} />
         </Link>
       </div>
@@ -32,9 +32,9 @@ export const RelatedTools: React.FC<RelatedToolsProps> = ({ currentSlug, categor
             <Link 
               key={tool.slug} 
               to={`/tools/${tool.slug}`}
-              className="group p-6 bg-white rounded-2xl border border-navy/5 hover:border-red-100 hover:shadow-xl hover:shadow-red-500/5 transition-all"
+              className="group p-6 bg-white rounded-2xl border border-navy/5 hover:border-emerald-100 hover:shadow-xl hover:shadow-emerald-500/5 transition-all"
             >
-              <div className="h-12 w-12 flex items-center justify-center bg-red-50 rounded-xl text-red-600 group-hover:bg-red-600 group-hover:text-white transition-all mb-4">
+              <div className="h-12 w-12 flex items-center justify-center bg-emerald-50 rounded-xl text-emerald-700 group-hover:bg-emerald-700 group-hover:text-white transition-all mb-4">
                 <Icon size={24} />
               </div>
               <h4 className="font-bold text-navy mb-1">{tool.name}</h4>

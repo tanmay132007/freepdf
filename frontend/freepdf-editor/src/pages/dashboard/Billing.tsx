@@ -29,7 +29,7 @@ export default function Billing() {
       <div className="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden p-8">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 bg-red-50 text-red-600 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">
               Current Plan
             </div>
             <div className="space-y-1">
@@ -66,14 +66,14 @@ export default function Billing() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 className={`bg-white rounded-3xl p-8 border hover:shadow-xl transition-all flex flex-col ${
-                  isCurrent ? 'ring-4 ring-red-50 border-red-200 shadow-lg' : 'border-slate-100 shadow-sm'
+                  isCurrent ? 'ring-4 ring-emerald-50 border-emerald-200 shadow-lg' : 'border-slate-100 shadow-sm'
                 }`}
               >
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center justify-between">
                     <h4 className="text-xl font-black text-slate-900 font-syne">{p.name}</h4>
                     {isCurrent && (
-                      <span className="bg-red-600 text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-lg">
+                      <span className="bg-emerald-700 text-white text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded-lg">
                         Active
                       </span>
                     )}
@@ -102,7 +102,7 @@ export default function Billing() {
                     isCurrent 
                       ? 'bg-slate-100 text-slate-400 cursor-not-allowed' 
                       : isHigher 
-                        ? 'bg-red-600 text-white shadow-xl shadow-red-100 hover:bg-red-700' 
+                        ? 'bg-emerald-700 text-white shadow-xl shadow-emerald-100 hover:bg-emerald-800' 
                         : 'bg-slate-900 text-white hover:bg-slate-800 shadow-xl'
                   }`}
                 >
@@ -126,11 +126,11 @@ export default function Billing() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
             <div className="space-y-2">
-              <p className="font-bold text-red-400">Can I cancel anytime?</p>
+              <p className="font-bold text-emerald-500">Can I cancel anytime?</p>
               <p className="text-sm text-slate-400 leading-relaxed font-medium">Yes, you can cancel your subscription at any time from your billing settings. You'll keep access until the end of your billing period.</p>
             </div>
             <div className="space-y-2">
-              <p className="font-bold text-red-400">Do you offer educational discounts?</p>
+              <p className="font-bold text-emerald-500">Do you offer educational discounts?</p>
               <p className="text-sm text-slate-400 leading-relaxed font-medium">Absolutely! Contact our support team with your institutional email to receive 50% off our Pro plan.</p>
             </div>
           </div>

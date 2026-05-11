@@ -1,5 +1,5 @@
 {
-  "name": "FreePDF Editor",
+  "name": "SavePDF Editor",
   "description": "Powerful AI-driven PDF processing tools. Merge, Compress, Split, Summarize, and more.",
   "requestFramePermissions": [],
   "majorCapabilities": ["PDF Editing", "AI Document Processing", "Format Conversion"]

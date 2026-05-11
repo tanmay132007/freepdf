@@ -9,8 +9,8 @@ interface ErrorCardProps {
 
 export const ErrorCard: React.FC<ErrorCardProps> = ({ error, onRetry }) => {
   return (
-    <div className="bg-red-50 border border-red-200 rounded-3xl p-8 text-center space-y-6 animate-in shake duration-500">
-      <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-red-100 text-red-600">
+    <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-8 text-center space-y-6 animate-in shake duration-500">
+      <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-emerald-100 text-emerald-700">
         <AlertCircle size={32} />
       </div>
       
@@ -23,7 +23,7 @@ export const ErrorCard: React.FC<ErrorCardProps> = ({ error, onRetry }) => {
 
       <button
         onClick={onRetry}
-        className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-2xl transition-all shadow-lg shadow-red-200 text-sm"
+        className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3 px-8 rounded-2xl transition-all shadow-lg shadow-emerald-200 text-sm"
       >
         <RefreshCw size={16} />
         Try Again

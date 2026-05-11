@@ -16,15 +16,15 @@ export const ToolHeader: React.FC<ToolHeaderProps> = ({ title, description, icon
   return (
     <div className="space-y-6 animate-in fade-in slide-in-from-top-4 duration-700">
       <nav className="flex items-center space-x-2 text-[10px] text-slate-400 uppercase tracking-[0.2em] font-bold">
-        <Link to="/" className="hover:text-red-600 transition-colors">Home</Link>
+        <Link to="/" className="hover:text-emerald-700 transition-colors">Home</Link>
         <span>/</span>
-        <Link to="/tools" className="hover:text-red-600 transition-colors">Tools</Link>
+        <Link to="/tools" className="hover:text-emerald-700 transition-colors">Tools</Link>
         <span>/</span>
-        <span className="text-red-600">{title}</span>
+        <span className="text-emerald-700">{title}</span>
       </nav>
 
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
-        <div className="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 shadow-sm flex-shrink-0">
+        <div className="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-700 shadow-sm flex-shrink-0">
           <IconComponent size={32} strokeWidth={2} />
         </div>
         

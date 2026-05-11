@@ -58,7 +58,7 @@ export const Pricing: React.FC = () => {
   ]
 
   const faqs = [
-    { q: "Can I use FreePDF without signing up?", a: "Yes! You can use all basic tools without an account. However, Pro features like AI Summarizer and larger file limits require a subscription." },
+    { q: "Can I use SavePDF without signing up?", a: "Yes! You can use all basic tools without an account. However, Pro features like AI Summarizer and larger file limits require a subscription." },
     { q: "How secure are my files?", a: "We use 256-bit SSL encryption for all file transfers. Your files are automatically deleted after processing (or after a set time for Pro users)." },
     { q: "What payment methods do you accept?", a: "We accept all major credit cards, PayPal, and Google Pay." },
     { q: "Can I cancel anytime?", a: "Absolutely. You can cancel your subscription from your account dashboard with one click." },
@@ -92,7 +92,7 @@ export const Pricing: React.FC = () => {
             onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
             className="w-14 h-8 bg-slate-200 rounded-full relative p-1 transition-all"
           >
-            <div className={`h-6 w-6 bg-red-600 rounded-full shadow-lg transition-all ${billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-0'}`} />
+            <div className={`h-6 w-6 bg-emerald-700 rounded-full shadow-lg transition-all ${billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-0'}`} />
           </button>
           <div className="flex items-center gap-2">
             <span className={`text-sm font-bold ${billingCycle === 'yearly' ? 'text-slate-900' : 'text-slate-400'}`}>Yearly</span>
@@ -109,12 +109,12 @@ export const Pricing: React.FC = () => {
               key={plan.name}
               className={`relative flex flex-col p-8 rounded-[2.5rem] border transition-all hover:translate-y-[-8px] ${
                 plan.highlight 
-                ? 'border-red-600 bg-white shadow-2xl shadow-red-500/10 z-10' 
+                ? 'border-emerald-700 bg-white shadow-2xl shadow-emerald-500/10 z-10' 
                 : 'border-slate-200 bg-white shadow-sm'
               }`}
             >
               {plan.badge && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest leading-none">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-700 text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest leading-none">
                   {plan.badge}
                 </div>
               )}
@@ -142,7 +142,7 @@ export const Pricing: React.FC = () => {
                       </>
                     ) : (
                       <>
-                        <div className="h-5 w-5 rounded-full bg-red-50 text-red-300 flex items-center justify-center shrink-0 mt-0.5">
+                        <div className="h-5 w-5 rounded-full bg-emerald-50 text-rose-300 flex items-center justify-center shrink-0 mt-0.5">
                           <X size={12} />
                         </div>
                         <span className="text-sm text-slate-300 font-medium">{feature.text}</span>
@@ -156,7 +156,7 @@ export const Pricing: React.FC = () => {
                 to={plan.href}
                 className={`w-full py-4 rounded-2xl text-center font-bold transition-all shadow-lg text-sm ${
                   plan.highlight 
-                  ? 'bg-red-600 text-white hover:bg-red-700 shadow-red-100' 
+                  ? 'bg-emerald-700 text-white hover:bg-emerald-800 shadow-emerald-100' 
                   : 'bg-slate-900 text-white hover:bg-slate-800'
                 }`}
               >
@@ -190,13 +190,13 @@ export const Pricing: React.FC = () => {
                   <tr key={idx} className="hover:bg-slate-50/50 transition-colors font-medium">
                     <td className="p-6 text-sm font-bold text-slate-800">{row.feature}</td>
                     <td className="p-6 text-sm text-slate-500">
-                      {typeof row.free === 'boolean' ? (row.free ? <Check className="text-green-500" /> : <X className="text-red-300" />) : row.free}
+                      {typeof row.free === 'boolean' ? (row.free ? <Check className="text-green-500" /> : <X className="text-rose-300" />) : row.free}
                     </td>
                     <td className="p-6 text-sm text-slate-500">
-                      {typeof row.pro === 'boolean' ? (row.pro ? <Check className="text-green-500" /> : <X className="text-red-300" />) : row.pro}
+                      {typeof row.pro === 'boolean' ? (row.pro ? <Check className="text-green-500" /> : <X className="text-rose-300" />) : row.pro}
                     </td>
                     <td className="p-6 text-sm text-slate-800 font-bold">
-                      {typeof row.biz === 'boolean' ? (row.biz ? <Check className="text-green-500" /> : <X className="text-red-300" />) : row.biz}
+                      {typeof row.biz === 'boolean' ? (row.biz ? <Check className="text-green-500" /> : <X className="text-rose-300" />) : row.biz}
                     </td>
                   </tr>
                 ))}
@@ -240,10 +240,10 @@ export const Pricing: React.FC = () => {
             Ready to boost your productivity?
           </h2>
           <p className="text-xl text-slate-400 max-w-xl mx-auto relative z-10 font-medium">
-            Join 2 million people who use FreePDF to manage their documents every day.
+            Join 2 million people who use SavePDF to manage their documents every day.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative z-10">
-            <Link to="/signup" className="w-full sm:w-auto bg-red-600 text-white font-bold py-5 px-10 rounded-2xl hover:bg-red-700 transition-all shadow-xl shadow-red-900/20">
+            <Link to="/signup" className="w-full sm:w-auto bg-emerald-700 text-white font-bold py-5 px-10 rounded-2xl hover:bg-emerald-800 transition-all shadow-xl shadow-emerald-900/20">
               Get Started for Free
             </Link>
             <Link to="/contact" className="w-full sm:w-auto bg-white/10 text-white font-bold py-5 px-10 rounded-2xl hover:bg-white/20 transition-all border border-white/10">

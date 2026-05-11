@@ -30,7 +30,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ progress, status }) =>
       <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden relative shadow-inner">
         <div 
           className={`h-full transition-all duration-700 rounded-full shadow-lg ${
-            status === 'completed' ? 'bg-green-500 shadow-green-200' : 'bg-red-600 shadow-red-200'
+            status === 'completed' ? 'bg-green-500 shadow-green-200' : 'bg-emerald-700 shadow-emerald-200'
           }`}
           style={{ width: `${progress}%` }}
         />

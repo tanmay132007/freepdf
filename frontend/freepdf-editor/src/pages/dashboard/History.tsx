@@ -50,7 +50,7 @@ export default function History() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold text-slate-900 tracking-tight font-syne">Operation History</h1>
-        <p className="text-slate-500 font-medium">Keep track of everything you've done on FreePDF.</p>
+        <p className="text-slate-500 font-medium">Keep track of everything you've done on SavePDF.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -61,7 +61,7 @@ export default function History() {
             placeholder="Search by tool name..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-white border border-slate-200 focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900 shadow-sm"
+            className="w-full bg-white border border-slate-200 focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900 shadow-sm"
           />
         </div>
         
@@ -109,7 +109,7 @@ export default function History() {
               <tr key={op.id} className="hover:bg-slate-50 transition-colors group">
                 <td className="px-6 py-4">
                   <div className="flex items-center gap-3">
-                    <div className="h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 group-hover:bg-red-50 group-hover:text-red-600 transition-all">
+                    <div className="h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-700 transition-all">
                       <FileText size={14} />
                     </div>
                     <span className="text-sm font-bold text-slate-900">{op.toolName}</span>
@@ -121,7 +121,7 @@ export default function History() {
                       ? 'bg-green-50 text-green-600' 
                       : op.status === 'processing'
                         ? 'bg-amber-50 text-amber-600 animate-pulse'
-                        : 'bg-red-50 text-red-600'
+                        : 'bg-emerald-50 text-emerald-700'
                   }`}>
                     {op.status === 'completed' && <CheckCircle2 size={10} />}
                     {op.status === 'processing' && <Clock size={10} />}
@@ -133,7 +133,7 @@ export default function History() {
                 <td className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest">{op.fileSize}</td>
                 <td className="px-6 py-4 text-right">
                   {op.status === 'completed' && (
-                    <button className="p-2 hover:bg-white rounded-lg text-slate-400 hover:text-red-600 transition-all border border-transparent hover:border-slate-100 shadow-sm hover:shadow">
+                    <button className="p-2 hover:bg-white rounded-lg text-slate-400 hover:text-emerald-700 transition-all border border-transparent hover:border-slate-100 shadow-sm hover:shadow">
                       <Download size={14} />
                     </button>
                   )}

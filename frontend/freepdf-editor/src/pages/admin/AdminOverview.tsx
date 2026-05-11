@@ -87,7 +87,7 @@ export default function AdminOverview() {
               <div className={`h-12 w-12 ${stat.bg} ${stat.color} rounded-2xl flex items-center justify-center`}>
                 <stat.icon size={20} />
               </div>
-              <div className={`flex items-center gap-1 font-black text-[10px] uppercase tracking-widest ${stat.isUp ? 'text-green-500' : 'text-red-500'}`}>
+              <div className={`flex items-center gap-1 font-black text-[10px] uppercase tracking-widest ${stat.isUp ? 'text-green-500' : 'text-emerald-600'}`}>
                 {stat.isUp ? <ArrowUpRight size={14} /> : <ArrowDownRight size={14} />} {stat.trend}
               </div>
             </div>
@@ -106,7 +106,7 @@ export default function AdminOverview() {
             <h3 className="text-xl font-black text-slate-900 font-syne tracking-tight">System Operations</h3>
             <div className="flex gap-4">
               <div className="flex items-center gap-2">
-                <div className="h-3 w-3 bg-red-600 rounded-full"></div>
+                <div className="h-3 w-3 bg-emerald-700 rounded-full"></div>
                 <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Total</span>
               </div>
               <div className="flex items-center gap-2">
@@ -120,8 +120,8 @@ export default function AdminOverview() {
               <AreaChart data={chartData}>
                 <defs>
                   <linearGradient id="colorTotal" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#dc2626" stopOpacity={0.1}/>
-                    <stop offset="95%" stopColor="#dc2626" stopOpacity={0}/>
+                    <stop offset="5%" stopColor="#0F8A64" stopOpacity={0.1}/>
+                    <stop offset="95%" stopColor="#0F8A64" stopOpacity={0}/>
                   </linearGradient>
                 </defs>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
@@ -141,7 +141,7 @@ export default function AdminOverview() {
                   contentStyle={{ borderRadius: '16px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', padding: '12px' }}
                   itemStyle={{ fontWeight: 800, textTransform: 'uppercase', fontSize: '10px' }}
                 />
-                <Area type="monotone" dataKey="ops" stroke="#dc2626" strokeWidth={3} fillOpacity={1} fill="url(#colorTotal)" />
+                <Area type="monotone" dataKey="ops" stroke="#0F8A64" strokeWidth={3} fillOpacity={1} fill="url(#colorTotal)" />
                 <Area type="monotone" dataKey="success" stroke="#22c55e" strokeWidth={3} fill="none" />
               </AreaChart>
             </ResponsiveContainer>
@@ -165,7 +165,7 @@ export default function AdminOverview() {
                 />
                 <Bar dataKey="value" radius={[0, 4, 4, 0]} barSize={12}>
                   {toolUsageData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={index === 0 ? '#dc2626' : '#f1f5f9'} />
+                    <Cell key={`cell-${index}`} fill={index === 0 ? '#0F8A64' : '#f1f5f9'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -199,7 +199,7 @@ export default function AdminOverview() {
                 {recentJobs.map((job) => (
                   <tr key={job.id} className="group hover:bg-slate-50 transition-colors">
                     <td className="px-8 py-5">
-                      <span className="text-xs font-black font-mono text-slate-400 group-hover:text-red-600 transition-colors">{job.id}</span>
+                      <span className="text-xs font-black font-mono text-slate-400 group-hover:text-emerald-700 transition-colors">{job.id}</span>
                     </td>
                     <td className="px-8 py-5">
                       <span className="text-sm font-bold text-slate-900 group-hover:translate-x-1 transition-transform inline-block">{job.tool}</span>
@@ -217,7 +217,7 @@ export default function AdminOverview() {
                       <span className={`px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-widest inline-flex items-center gap-1.5 ${
                         job.status === 'completed' ? 'bg-green-100 text-green-700' :
                         job.status === 'processing' ? 'bg-amber-100 text-amber-700' :
-                        'bg-red-100 text-red-700'
+                        'bg-emerald-100 text-emerald-800'
                       }`}>
                         {job.status === 'completed' && <CheckCircle size={10} />}
                         {job.status === 'processing' && <RefreshCw size={10} className="animate-spin" />}
@@ -237,7 +237,7 @@ export default function AdminOverview() {
           <h3 className="text-xl font-black text-slate-900 font-syne tracking-tight">New Members</h3>
           <div className="space-y-6">
             {[
-              { email: 'alex@design.com', plan: 'Pro', time: '12m ago', color: 'bg-red-600' },
+              { email: 'alex@design.com', plan: 'Pro', time: '12m ago', color: 'bg-emerald-700' },
               { email: 'sarah.j@gmail.com', plan: 'Free', time: '45m ago', color: 'bg-blue-600' },
               { email: 'tech_ninja@hub.io', plan: 'Business', time: '1h ago', color: 'bg-purple-600' },
               { email: 'mike_99@dev.com', plan: 'Free', time: '3h ago', color: 'bg-slate-900' },
@@ -249,10 +249,10 @@ export default function AdminOverview() {
                     {user.email[0].toUpperCase()}
                   </div>
                   <div className="space-y-0.5">
-                    <p className="text-sm font-bold text-slate-900 group-hover:text-red-600 transition-colors">{user.email}</p>
+                    <p className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">{user.email}</p>
                     <div className="flex items-center gap-3">
                       <span className={`text-[10px] font-black uppercase tracking-widest ${
-                        user.plan === 'Pro' ? 'text-red-600' : 
+                        user.plan === 'Pro' ? 'text-emerald-700' : 
                         user.plan === 'Business' ? 'text-purple-600' : 
                         'text-slate-400'
                       }`}>{user.plan}</span>
@@ -260,7 +260,7 @@ export default function AdminOverview() {
                     </div>
                   </div>
                 </div>
-                <ArrowRight size={14} className="text-slate-200 group-hover:text-red-600 group-hover:translate-x-1 transition-all" />
+                <ArrowRight size={14} className="text-slate-200 group-hover:text-emerald-700 group-hover:translate-x-1 transition-all" />
               </div>
             ))}
           </div>

@@ -22,7 +22,7 @@ export default function Signup() {
     return 3;
   };
 
-  const strengthColor = ['bg-slate-200', 'bg-red-500', 'bg-yellow-500', 'bg-green-500'];
+  const strengthColor = ['bg-slate-200', 'bg-emerald-600', 'bg-yellow-500', 'bg-green-500'];
   const strengthText = ['', 'Weak', 'Good', 'Strong'];
 
   const handleSignup = async (e: React.FormEvent) => {
@@ -102,17 +102,17 @@ export default function Signup() {
         <div className="p-10 space-y-8">
           <div className="text-center space-y-2">
             <Link to="/" className="inline-flex items-center gap-2 mb-4">
-              <div className="h-10 w-10 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-red-200">
+              <div className="h-10 w-10 bg-emerald-700 rounded-xl flex items-center justify-center text-white shadow-lg shadow-emerald-200">
                 <Files size={24} />
               </div>
-              <span className="text-2xl font-bold text-slate-800 tracking-tight font-syne">FreePDF</span>
+              <span className="text-2xl font-bold text-slate-800 tracking-tight font-syne">SavePDF</span>
             </Link>
             <h1 className="text-3xl font-bold text-slate-900 font-syne tracking-tight">Create account</h1>
-            <p className="text-slate-500 font-medium text-sm">Join FreePDF today and start editing</p>
+            <p className="text-slate-500 font-medium text-sm">Join SavePDF today and start editing</p>
           </div>
 
           {error && (
-            <div className="bg-red-50 border border-red-100 text-red-600 p-4 rounded-2xl flex items-start gap-3 text-sm">
+            <div className="bg-emerald-50 border border-emerald-100 text-emerald-700 p-4 rounded-2xl flex items-start gap-3 text-sm">
               <AlertCircle size={18} className="shrink-0 mt-0.5" />
               <p>{error}</p>
             </div>
@@ -126,7 +126,7 @@ export default function Signup() {
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 placeholder="John Doe"
-                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
+                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
                 required
               />
             </div>
@@ -138,7 +138,7 @@ export default function Signup() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com"
-                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
+                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
                 required
               />
             </div>
@@ -150,7 +150,7 @@ export default function Signup() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
+                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
                 required
               />
               <div className="flex gap-1 mt-2">
@@ -173,7 +173,7 @@ export default function Signup() {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
+                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
                 required
               />
             </div>
@@ -181,7 +181,7 @@ export default function Signup() {
             <button
               id="signup-btn"
               disabled={loading}
-              className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-4 rounded-2xl shadow-xl shadow-red-200 transition-all flex items-center justify-center gap-2 mt-6 active:scale-95"
+              className="w-full bg-emerald-700 hover:bg-emerald-800 disabled:bg-emerald-300 text-white font-bold py-4 rounded-2xl shadow-xl shadow-emerald-200 transition-all flex items-center justify-center gap-2 mt-6 active:scale-95"
             >
               {loading ? <Loader2 size={20} className="animate-spin" /> : 'Create Account'}
             </button>
@@ -206,7 +206,7 @@ export default function Signup() {
 
           <p className="text-center text-sm font-medium text-slate-500 pt-4">
             Already have an account?{' '}
-            <Link to="/login" className="text-red-600 font-bold hover:underline">Sign in</Link>
+            <Link to="/login" className="text-emerald-700 font-bold hover:underline">Sign in</Link>
           </p>
         </div>
       </motion.div>

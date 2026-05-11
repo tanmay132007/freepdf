@@ -42,7 +42,7 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({ downloadUrl, fil
         <a
           href={downloadUrl}
           download={filename}
-          className="flex-1 flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-red-200 transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+          className="flex-1 flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-emerald-200 transition-all transform hover:scale-[1.02] active:scale-[0.98]"
         >
           <Download className="h-5 w-5" />
           Download PDF

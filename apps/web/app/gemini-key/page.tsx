@@ -11,35 +11,35 @@ export default function GeminiKeyPage() {
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
-    setGeminiApiKey(window.localStorage.getItem("freepdf_gemini_api_key") ?? "");
+    setGeminiApiKey(window.localStorage.getItem("savepdf_gemini_api_key") ?? "");
   }, []);
 
   const saveKey = () => {
-    window.localStorage.setItem("freepdf_gemini_api_key", geminiApiKey.trim());
+    window.localStorage.setItem("savepdf_gemini_api_key", geminiApiKey.trim());
     setSaved(true);
     window.setTimeout(() => setSaved(false), 1800);
   };
 
   const clearKey = () => {
-    window.localStorage.removeItem("freepdf_gemini_api_key");
+    window.localStorage.removeItem("savepdf_gemini_api_key");
     setGeminiApiKey("");
     setSaved(false);
   };
 
   return (
-    <main className="min-h-screen bg-white text-navy">
+    <main className="min-h-screen bg-linen text-navy">
       <Navbar />
       <section className="mx-auto max-w-4xl px-6 pb-20 pt-32">
-        <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-lg bg-red-50 text-red-600">
+        <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-lg bg-emerald/10 text-emerald">
           <FileKey aria-hidden="true" size={34} />
         </div>
         <h1 className="font-syne text-5xl font-bold tracking-normal">Gemini Key</h1>
         <p className="mt-4 text-lg leading-8 text-navy/60">
           Save your Gemini API key in this browser to run AI Summarizer, OCR,
-          Translate, and Compare. FreePDF does not require sign in.
+          Translate, and Compare. SavePDF does not require sign in.
         </p>
 
-        <section className="mt-10 rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+        <section className="mt-10 rounded-lg border border-gold/25 bg-white p-6 shadow-sm">
           <label className="text-sm font-bold text-navy" htmlFor="gemini-key">
             Gemini API key
           </label>
@@ -49,13 +49,13 @@ export default function GeminiKeyPage() {
             value={geminiApiKey}
             onChange={(event) => setGeminiApiKey(event.target.value)}
             placeholder="AIza..."
-            className="mt-3 w-full rounded-md border border-zinc-200 px-4 py-3 outline-none transition focus:border-red-500"
+            className="mt-3 w-full rounded-md border border-gold/25 px-4 py-3 outline-none transition focus:border-emerald"
           />
           <div className="mt-5 flex flex-wrap gap-3">
             <button
               type="button"
               onClick={saveKey}
-              className="inline-flex items-center gap-2 rounded-md bg-red-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-red-700"
+              className="inline-flex items-center gap-2 rounded-md bg-emerald px-4 py-2 text-sm font-bold text-white transition hover:bg-moss"
             >
               <Sparkles aria-hidden="true" size={17} />
               Save key
@@ -63,7 +63,7 @@ export default function GeminiKeyPage() {
             <button
               type="button"
               onClick={clearKey}
-              className="inline-flex items-center gap-2 rounded-md border border-zinc-200 px-4 py-2 text-sm font-bold text-navy/70 transition hover:border-red-200 hover:text-red-600"
+              className="inline-flex items-center gap-2 rounded-md border border-gold/25 px-4 py-2 text-sm font-bold text-navy/70 transition hover:border-emerald/25 hover:text-emerald"
             >
               <Trash2 aria-hidden="true" size={17} />
               Clear

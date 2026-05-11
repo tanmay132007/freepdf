@@ -3,12 +3,12 @@ import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 
 export const metadata: Metadata = {
-  title: "Pricing — FreePDF"
+  title: "Pricing — SavePDF"
 };
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-white text-navy">
+    <main className="min-h-screen bg-linen text-navy">
       <Navbar />
       <section className="mx-auto max-w-4xl px-6 pb-20 pt-32 text-center">
         <h1 className="font-syne text-5xl font-bold">Pricing</h1>

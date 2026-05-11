@@ -8,4 +8,8 @@
 
 body {
   margin: 0;
+  background: #FCFAF5;
+  color: #16201B;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }

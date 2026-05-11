@@ -69,7 +69,7 @@ export default function Settings() {
 
       {feedback && (
         <div className={`p-4 rounded-2xl flex items-start gap-3 text-sm animate-fade-in ${
-          feedback.type === 'success' ? 'bg-green-50 text-green-700 border border-green-100' : 'bg-red-50 text-red-700 border border-red-100'
+          feedback.type === 'success' ? 'bg-green-50 text-green-700 border border-green-100' : 'bg-emerald-50 text-emerald-800 border border-emerald-100'
         }`}>
           {feedback.type === 'success' ? <Check size={18} /> : <AlertCircle size={18} />}
           <p className="font-bold">{feedback.message}</p>
@@ -80,7 +80,7 @@ export default function Settings() {
       <section className="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
         <div className="p-8 border-b border-slate-50 bg-slate-50/50">
           <div className="flex items-center gap-4">
-            <div className="h-12 w-12 bg-red-600 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-red-100">
+            <div className="h-12 w-12 bg-emerald-700 text-white rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-100">
               <User size={24} />
             </div>
             <div>
@@ -99,7 +99,7 @@ export default function Settings() {
                   <Camera size={20} className="text-white" />
                 </div>
               </div>
-              <button type="button" className="text-[10px] font-black uppercase tracking-widest text-red-600 hover:underline">Change Photo</button>
+              <button type="button" className="text-[10px] font-black uppercase tracking-widest text-emerald-700 hover:underline">Change Photo</button>
             </div>
 
             <div className="flex-1 space-y-6">
@@ -111,7 +111,7 @@ export default function Settings() {
                     type="text"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900"
+                    className="w-full bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900"
                   />
                 </div>
               </div>
@@ -134,7 +134,7 @@ export default function Settings() {
           <div className="flex justify-end pt-4">
             <button
               disabled={loading}
-              className="bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-3 px-10 rounded-2xl shadow-xl shadow-red-200 transition-all flex items-center gap-2 active:scale-95"
+              className="bg-emerald-700 hover:bg-emerald-800 disabled:bg-emerald-300 text-white font-bold py-3 px-10 rounded-2xl shadow-xl shadow-emerald-200 transition-all flex items-center gap-2 active:scale-95"
             >
               {loading ? <Loader2 size={18} className="animate-spin" /> : <><Check size={18} /> Save Changes</>}
             </button>
@@ -167,7 +167,7 @@ export default function Settings() {
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-slate-50 border border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900"
+                  className="w-full bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900"
                 />
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function Settings() {
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full bg-slate-50 border border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900"
+                  className="w-full bg-slate-50 border border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900"
                 />
               </div>
             </div>
@@ -198,17 +198,17 @@ export default function Settings() {
       </section>
 
       {/* Danger Zone */}
-      <section className="bg-red-50 rounded-3xl border border-red-100 shadow-sm overflow-hidden">
+      <section className="bg-emerald-50 rounded-3xl border border-emerald-100 shadow-sm overflow-hidden">
         <div className="p-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="space-y-2">
-            <h2 className="text-lg font-bold text-red-900 flex items-center gap-2">
+            <h2 className="text-lg font-bold text-emerald-950 flex items-center gap-2">
               <AlertCircle size={20} /> Danger Zone
             </h2>
-            <p className="text-sm font-medium text-red-700">
+            <p className="text-sm font-medium text-emerald-800">
               Permanently delete your account and all associated data. This action cannot be undone.
             </p>
           </div>
-          <button className="shrink-0 bg-white hover:bg-red-600 hover:text-white text-red-600 font-bold py-3 px-8 rounded-2xl border border-red-200 transition-all shadow-sm active:scale-95 flex items-center gap-2">
+          <button className="shrink-0 bg-white hover:bg-emerald-700 hover:text-white text-emerald-700 font-bold py-3 px-8 rounded-2xl border border-emerald-200 transition-all shadow-sm active:scale-95 flex items-center gap-2">
             <Trash2 size={18} /> Delete Account
           </button>
         </div>

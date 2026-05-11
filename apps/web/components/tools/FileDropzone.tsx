@@ -68,10 +68,10 @@ export function FileDropzone({
       }}
       className={`block rounded-lg border-2 border-dashed p-10 transition ${
         disabled
-          ? "cursor-not-allowed border-zinc-200 bg-zinc-100 text-zinc-400"
+          ? "cursor-not-allowed border-zinc-200 bg-parchment text-zinc-400"
           : isDragging
-            ? "cursor-pointer border-red-500 bg-red-50"
-            : "cursor-pointer border-zinc-300 bg-white hover:border-red-400 hover:bg-red-50"
+            ? "cursor-pointer border-emerald bg-emerald/10"
+            : "cursor-pointer border-gold/30 bg-white hover:border-emerald hover:bg-emerald/10"
       }`}
     >
       <input
@@ -82,14 +82,14 @@ export function FileDropzone({
         onChange={(event) => handleFiles(event.target.files)}
         className="sr-only"
       />
-      <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-lg bg-red-600 text-white">
+      <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-lg bg-emerald text-white">
         <UploadCloud aria-hidden="true" size={30} />
       </div>
       <p className="text-lg font-bold text-navy">Choose {fileLabel} or drag here</p>
       <p className="mt-2 text-sm text-navy/55">
         Up to {maxSizeMB}MB per file
       </p>
-      {error ? <p className="mt-4 text-sm font-semibold text-red-600">{error}</p> : null}
+      {error ? <p className="mt-4 text-sm font-semibold text-rose-700">{error}</p> : null}
     </label>
   );
 }

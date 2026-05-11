@@ -26,7 +26,7 @@ export default function BlogPostPage() {
     }
 
     setPost(currentPost);
-    setMetadata(`${currentPost.title} — FreePDF Blog`, currentPost.description);
+    setMetadata(`${currentPost.title} — SavePDF Blog`, currentPost.description);
 
     // Get related posts (same category, excluding current)
     const allPosts = readBlogPosts();
@@ -43,11 +43,11 @@ export default function BlogPostPage() {
       {/* Breadcrumb */}
       <nav className="bg-slate-50 px-6 py-4">
         <div className="max-w-4xl mx-auto flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 overflow-x-auto no-scrollbar whitespace-nowrap">
-          <Link to="/" className="hover:text-red-600 flex items-center gap-1 transition-colors">
+          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1 transition-colors">
             <Home size={12} /> Home
           </Link>
           <ChevronRight size={10} />
-          <Link to="/blog" className="hover:text-red-600 transition-colors">Blog</Link>
+          <Link to="/blog" className="hover:text-emerald-700 transition-colors">Blog</Link>
           <ChevronRight size={10} />
           <span className="text-slate-900 truncate max-w-[200px]">{post.title}</span>
         </div>
@@ -61,12 +61,12 @@ export default function BlogPostPage() {
             animate={{ opacity: 1, y: 0 }}
             className="flex items-center gap-3"
           >
-            <span className="px-3 py-1.5 rounded-xl bg-red-600 text-white text-[10px] font-black uppercase tracking-widest shadow-lg shadow-red-200">
+            <span className="px-3 py-1.5 rounded-xl bg-emerald-700 text-white text-[10px] font-black uppercase tracking-widest shadow-lg shadow-emerald-200">
               {post.category}
             </span>
             <div className="h-px bg-slate-200 flex-1"></div>
             <div className="flex gap-2">
-              <button className="p-2.5 bg-white border border-slate-200 rounded-xl text-slate-400 hover:text-red-600 hover:border-red-100 transition-all shadow-sm">
+              <button className="p-2.5 bg-white border border-slate-200 rounded-xl text-slate-400 hover:text-emerald-700 hover:border-emerald-100 transition-all shadow-sm">
                 <Share2 size={16} />
               </button>
             </div>
@@ -98,11 +98,11 @@ export default function BlogPostPage() {
             
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
-                <Calendar size={16} className="text-red-600" />
+                <Calendar size={16} className="text-emerald-700" />
                 <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">{post.date}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock size={16} className="text-red-600" />
+                <Clock size={16} className="text-emerald-700" />
                 <span className="text-[10px] font-black uppercase tracking-widest text-slate-500">{post.readingTime}</span>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function BlogPostPage() {
       <article className="py-20 px-6">
         <div className="max-w-4xl mx-auto flex flex-col lg:flex-row gap-16">
           <div className="flex-1 min-w-0">
-            <div className="markdown-body prose prose-slate prose-lg md:prose-xl max-w-none prose-headings:font-syne prose-headings:font-black prose-a:text-red-600 prose-a:font-bold prose-blockquote:border-red-600 prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:px-8 prose-blockquote:rounded-3xl prose-strong:text-slate-900 prose-img:rounded-3xl">
+            <div className="markdown-body prose prose-slate prose-lg md:prose-xl max-w-none prose-headings:font-syne prose-headings:font-black prose-a:text-emerald-700 prose-a:font-bold prose-blockquote:border-emerald-700 prose-blockquote:bg-slate-50 prose-blockquote:py-2 prose-blockquote:px-8 prose-blockquote:rounded-3xl prose-strong:text-slate-900 prose-img:rounded-3xl">
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
 
@@ -128,7 +128,7 @@ export default function BlogPostPage() {
                 <p className="text-slate-400 text-lg font-medium">Use our professional PDF tools today for free. No registration required.</p>
                 <Link 
                   to="/" 
-                  className="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-widest text-xs px-8 py-5 rounded-2xl transition-all shadow-xl shadow-red-900/50 active:scale-95"
+                  className="inline-flex items-center gap-3 bg-emerald-700 hover:bg-emerald-800 text-white font-black uppercase tracking-widest text-xs px-8 py-5 rounded-2xl transition-all shadow-xl shadow-emerald-900/50 active:scale-95"
                 >
                   Get Started Now <ArrowRight size={18} />
                 </Link>
@@ -143,8 +143,8 @@ export default function BlogPostPage() {
                 <div className="space-y-8">
                   {relatedPosts.map((r) => (
                     <Link key={r.slug} to={`/blog/${r.slug}`} className="group block space-y-3">
-                      <p className="text-[10px] font-black uppercase tracking-widest text-red-600">{r.category}</p>
-                      <h5 className="font-bold text-slate-900 group-hover:text-red-600 transition-colors leading-snug">
+                      <p className="text-[10px] font-black uppercase tracking-widest text-emerald-700">{r.category}</p>
+                      <h5 className="font-bold text-slate-900 group-hover:text-emerald-700 transition-colors leading-snug">
                         {r.title}
                       </h5>
                       <p className="text-xs text-slate-400 font-medium">10 Min Read</p>
@@ -156,12 +156,12 @@ export default function BlogPostPage() {
                 </div>
               </div>
 
-              <div className="p-8 bg-red-600 rounded-[2rem] text-white space-y-6">
+              <div className="p-8 bg-emerald-700 rounded-[2rem] text-white space-y-6">
                 <h4 className="text-xl font-black font-syne">Pro Sidebar</h4>
                 <p className="text-sm font-medium leading-relaxed opacity-90">
                   Join our Pro tier for 256-bit encryption and unlimited cloud storage.
                 </p>
-                <Link to="/pricing" className="block text-center py-4 bg-white text-red-600 rounded-2xl font-black uppercase tracking-widest text-[10px] shadow-xl shadow-red-900/20 active:scale-95">
+                <Link to="/pricing" className="block text-center py-4 bg-white text-emerald-700 rounded-2xl font-black uppercase tracking-widest text-[10px] shadow-xl shadow-emerald-900/20 active:scale-95">
                   View Pro Plans
                 </Link>
               </div>

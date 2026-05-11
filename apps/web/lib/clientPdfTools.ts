@@ -27,7 +27,7 @@ const pdfMime = "application/pdf";
 const pageMargin = 48;
 
 function basename(file: File) {
-  return file.name.replace(/\.[^.]+$/, "") || "freepdf";
+  return file.name.replace(/\.[^.]+$/, "") || "savepdf";
 }
 
 function blobFromBytes(bytes: Uint8Array, type: string) {
@@ -188,7 +188,7 @@ async function mergePdfs(files: File[]): Promise<ClientPdfResult> {
 
   return {
     blob: pdfBlob(await output.save({ useObjectStreams: true })),
-    filename: "freepdf-merged.pdf"
+    filename: "savepdf-merged.pdf"
   };
 }
 
@@ -276,7 +276,7 @@ async function imagesToPdf(files: File[]): Promise<ClientPdfResult> {
 
   return {
     blob: pdfBlob(await output.save({ useObjectStreams: true })),
-    filename: "freepdf-images.pdf"
+    filename: "savepdf-images.pdf"
   };
 }
 
@@ -416,7 +416,7 @@ async function createTextPptx(slides: string[]) {
   );
   zip.file(
     "ppt/theme/theme1.xml",
-    '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="FreePDF"><a:themeElements><a:clrScheme name="FreePDF"><a:dk1><a:srgbClr val="111827"/></a:dk1><a:lt1><a:srgbClr val="FFFFFF"/></a:lt1><a:dk2><a:srgbClr val="1F2937"/></a:dk2><a:lt2><a:srgbClr val="F9FAFB"/></a:lt2><a:accent1><a:srgbClr val="DC2626"/></a:accent1><a:accent2><a:srgbClr val="111827"/></a:accent2><a:accent3><a:srgbClr val="6B7280"/></a:accent3><a:accent4><a:srgbClr val="F97316"/></a:accent4><a:accent5><a:srgbClr val="0F766E"/></a:accent5><a:accent6><a:srgbClr val="2563EB"/></a:accent6><a:hlink><a:srgbClr val="2563EB"/></a:hlink><a:folHlink><a:srgbClr val="7C3AED"/></a:folHlink></a:clrScheme><a:fontScheme name="FreePDF"><a:majorFont><a:latin typeface="Arial"/></a:majorFont><a:minorFont><a:latin typeface="Arial"/></a:minorFont></a:fontScheme><a:fmtScheme name="FreePDF"><a:fillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:fillStyleLst><a:lnStyleLst><a:ln w="9525"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln></a:lnStyleLst><a:effectStyleLst><a:effectStyle/></a:effectStyleLst><a:bgFillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:bgFillStyleLst></a:fmtScheme></a:themeElements></a:theme>'
+    '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="SavePDF"><a:themeElements><a:clrScheme name="SavePDF"><a:dk1><a:srgbClr val="16201B"/></a:dk1><a:lt1><a:srgbClr val="FFFFFF"/></a:lt1><a:dk2><a:srgbClr val="1F2937"/></a:dk2><a:lt2><a:srgbClr val="F9FAFB"/></a:lt2><a:accent1><a:srgbClr val="0F8A64"/></a:accent1><a:accent2><a:srgbClr val="16201B"/></a:accent2><a:accent3><a:srgbClr val="6B7280"/></a:accent3><a:accent4><a:srgbClr val="C69A47"/></a:accent4><a:accent5><a:srgbClr val="0F766E"/></a:accent5><a:accent6><a:srgbClr val="2563EB"/></a:accent6><a:hlink><a:srgbClr val="2563EB"/></a:hlink><a:folHlink><a:srgbClr val="7C3AED"/></a:folHlink></a:clrScheme><a:fontScheme name="SavePDF"><a:majorFont><a:latin typeface="Arial"/></a:majorFont><a:minorFont><a:latin typeface="Arial"/></a:minorFont></a:fontScheme><a:fmtScheme name="SavePDF"><a:fillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:fillStyleLst><a:lnStyleLst><a:ln w="9525"><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:ln></a:lnStyleLst><a:effectStyleLst><a:effectStyle/></a:effectStyleLst><a:bgFillStyleLst><a:solidFill><a:schemeClr val="phClr"/></a:solidFill></a:bgFillStyleLst></a:fmtScheme></a:themeElements></a:theme>'
   );
 
   Array.from({ length: slideCount }, (_, index) => slides[index] || "").forEach(
@@ -513,7 +513,7 @@ async function htmlToPdf(options: ToolOptions): Promise<ClientPdfResult> {
   return writeTextPdf("HTML to PDF", text, "webpage.pdf");
 }
 
-async function addWatermark(file: File, text = "FreePDF"): Promise<ClientPdfResult> {
+async function addWatermark(file: File, text = "SavePDF"): Promise<ClientPdfResult> {
   const pdf = await readPdf(file);
   const font = await pdf.embedFont(StandardFonts.HelveticaBold);
 
@@ -596,7 +596,7 @@ async function annotatePdf(
   const font = await pdf.embedFont(StandardFonts.HelveticaBold);
   const page = pdf.getPage(0);
   const { width, height } = page.getSize();
-  const text = options.text?.trim() || (slug === "sign-pdf" ? "Signed" : "FreePDF note");
+  const text = options.text?.trim() || (slug === "sign-pdf" ? "Signed" : "SavePDF note");
 
   if (slug === "redact-pdf") {
     page.drawRectangle({

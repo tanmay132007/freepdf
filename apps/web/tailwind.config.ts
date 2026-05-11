@@ -9,7 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: "#111827"
+        navy: "#16201B",
+        parchment: "#F7F3EA",
+        linen: "#FCFAF5",
+        moss: "#315C4A",
+        emerald: "#0F8A64",
+        gold: "#C69A47"
       },
       fontFamily: {
         syne: ["Syne", "ui-sans-serif", "system-ui", "sans-serif"]

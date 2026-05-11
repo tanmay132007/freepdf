@@ -81,7 +81,7 @@ export default function Files() {
             placeholder="Search by filename..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-white border border-slate-200 focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900 shadow-sm"
+            className="w-full bg-white border border-slate-200 focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900 shadow-sm"
           />
         </div>
         
@@ -122,10 +122,10 @@ export default function Files() {
           <div className="space-y-2">
             <h2 className="text-xl font-bold text-slate-900">No saved files yet</h2>
             <p className="text-slate-400 max-w-sm mx-auto text-sm font-medium">
-              Processed files are automatically saved for <span className="text-red-600 font-bold">Pro</span> and <span className="text-red-600 font-bold">Business</span> users. Upgrade to never lose your work.
+              Processed files are automatically saved for <span className="text-emerald-700 font-bold">Pro</span> and <span className="text-emerald-700 font-bold">Business</span> users. Upgrade to never lose your work.
             </p>
           </div>
-          <button className="bg-red-600 text-white px-8 py-3 rounded-2xl font-bold text-sm hover:bg-red-700 transition-all shadow-xl shadow-red-200">
+          <button className="bg-emerald-700 text-white px-8 py-3 rounded-2xl font-bold text-sm hover:bg-emerald-800 transition-all shadow-xl shadow-emerald-200">
             View Pricing Plans
           </button>
         </div>
@@ -146,7 +146,7 @@ export default function Files() {
                 className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-all group"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="h-12 w-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center">
+                  <div className="h-12 w-12 bg-emerald-50 text-emerald-700 rounded-xl flex items-center justify-center">
                     <FileText size={24} />
                   </div>
                   <button className="p-2 hover:bg-slate-50 rounded-lg text-slate-300 transition-colors">
@@ -154,7 +154,7 @@ export default function Files() {
                   </button>
                 </div>
                 <div className="space-y-1">
-                  <h3 className="font-bold text-slate-900 truncate group-hover:text-red-600 transition-colors" title={file.name}>
+                  <h3 className="font-bold text-slate-900 truncate group-hover:text-emerald-700 transition-colors" title={file.name}>
                     {file.name}
                   </h3>
                   <p className="text-xs font-medium text-slate-400 uppercase tracking-widest">{formatSize(file.size)}</p>
@@ -164,10 +164,10 @@ export default function Files() {
                     Expires {file.expiresAt}
                   </div>
                   <div className="flex items-center gap-2">
-                    <button className="p-2 hover:bg-red-50 text-slate-400 hover:text-red-600 rounded-lg transition-all">
+                    <button className="p-2 hover:bg-emerald-50 text-slate-400 hover:text-emerald-700 rounded-lg transition-all">
                       <Download size={16} />
                     </button>
-                    <button className="p-2 hover:bg-red-50 text-slate-400 hover:text-red-500 rounded-lg transition-all">
+                    <button className="p-2 hover:bg-emerald-50 text-slate-400 hover:text-emerald-600 rounded-lg transition-all">
                       <Trash2 size={16} />
                     </button>
                   </div>
@@ -195,17 +195,17 @@ export default function Files() {
                       <div className="h-8 w-8 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600">
                         <FileText size={14} />
                       </div>
-                      <span className="text-sm font-bold text-slate-900 group-hover:text-red-600 transition-colors">{file.name}</span>
+                      <span className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">{file.name}</span>
                     </div>
                   </td>
                   <td className="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-widest">{formatSize(file.size)}</td>
                   <td className="px-6 py-4 text-xs font-medium text-slate-400">{file.createdAt}</td>
                   <td className="px-6 py-4 text-right">
                     <div className="flex items-center justify-end gap-1">
-                      <button className="p-2 hover:bg-white rounded-lg text-slate-400 hover:text-red-600 transition-all border border-transparent hover:border-slate-100">
+                      <button className="p-2 hover:bg-white rounded-lg text-slate-400 hover:text-emerald-700 transition-all border border-transparent hover:border-slate-100">
                         <Download size={14} />
                       </button>
-                      <button className="p-2 hover:bg-white rounded-lg text-slate-400 hover:text-red-500 transition-all border border-transparent hover:border-slate-100">
+                      <button className="p-2 hover:bg-white rounded-lg text-slate-400 hover:text-emerald-600 transition-all border border-transparent hover:border-slate-100">
                         <Trash2 size={14} />
                       </button>
                     </div>

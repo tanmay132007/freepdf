@@ -53,7 +53,7 @@ export default function AdminJobs() {
         <div className="flex bg-white rounded-xl p-1 border border-slate-100 shadow-sm">
           <button 
             onClick={() => setRefreshing(true)}
-            className="p-2 text-slate-400 hover:text-red-600 transition-colors"
+            className="p-2 text-slate-400 hover:text-emerald-700 transition-colors"
           >
             <RefreshCw size={18} className={refreshing ? 'animate-spin' : ''} />
           </button>
@@ -66,7 +66,7 @@ export default function AdminJobs() {
           { label: 'Total JobsToday', value: '1,429', icon: Zap, color: 'text-blue-500' },
           { label: 'Success Rate', value: '98.2%', icon: Clock, color: 'text-green-500' },
           { label: 'Avg Process', value: '112ms', icon: FileText, color: 'text-amber-500' },
-          { label: 'Failed Jobs', value: '26', icon: AlertCircle, color: 'text-red-500' },
+          { label: 'Failed Jobs', value: '26', icon: AlertCircle, color: 'text-emerald-600' },
         ].map((stat, i) => (
           <div key={i} className="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm flex items-center gap-6">
             <div className={`h-12 w-12 rounded-2xl bg-slate-50 flex items-center justify-center ${stat.color}`}>
@@ -131,7 +131,7 @@ export default function AdminJobs() {
                   className="group hover:bg-slate-50 transition-colors"
                 >
                   <td className="px-8 py-6 whitespace-nowrap">
-                    <span className="text-xs font-black font-mono text-slate-400 group-hover:text-red-600 transition-colors">{job.id}</span>
+                    <span className="text-xs font-black font-mono text-slate-400 group-hover:text-emerald-700 transition-colors">{job.id}</span>
                   </td>
                   <td className="px-8 py-6 whitespace-nowrap">
                     <div className="flex items-center gap-3">
@@ -161,7 +161,7 @@ export default function AdminJobs() {
                       job.status === 'completed' ? 'bg-green-100 text-green-700' :
                       job.status === 'processing' ? 'bg-amber-100 text-amber-700' :
                       job.status === 'pending' ? 'bg-blue-100 text-blue-700' :
-                      'bg-red-100 text-red-700 shadow-sm shadow-red-200'
+                      'bg-emerald-100 text-emerald-800 shadow-sm shadow-emerald-200'
                     }`}>
                       {job.status === 'completed' && <div className="h-1 w-1 bg-current rounded-full" />}
                       {job.status === 'processing' && <RefreshCw size={10} className="animate-spin" />}
@@ -170,7 +170,7 @@ export default function AdminJobs() {
                   </td>
                   <td className="px-8 py-6 text-right whitespace-nowrap">
                     {job.error ? (
-                      <div className="inline-flex items-center gap-2 text-red-500 group/tooltip relative">
+                      <div className="inline-flex items-center gap-2 text-emerald-600 group/tooltip relative">
                         <HelpCircle size={14} />
                         <div className="absolute right-0 bottom-full mb-2 w-48 p-3 bg-slate-900 text-white text-[10px] font-medium rounded-xl opacity-0 invisible group-hover/tooltip:opacity-100 group-hover/tooltip:visible transition-all z-10 text-center shadow-2xl">
                           {job.error}

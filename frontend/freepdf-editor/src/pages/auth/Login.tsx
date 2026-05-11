@@ -52,17 +52,17 @@ export default function Login() {
         <div className="p-10 space-y-8">
           <div className="text-center space-y-2">
             <Link to="/" className="inline-flex items-center gap-2 mb-4">
-              <div className="h-10 w-10 bg-red-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-red-200">
+              <div className="h-10 w-10 bg-emerald-700 rounded-xl flex items-center justify-center text-white shadow-lg shadow-emerald-200">
                 <Files size={24} />
               </div>
-              <span className="text-2xl font-bold text-slate-800 tracking-tight font-syne">FreePDF</span>
+              <span className="text-2xl font-bold text-slate-800 tracking-tight font-syne">SavePDF</span>
             </Link>
             <h1 className="text-3xl font-bold text-slate-900 font-syne tracking-tight">Welcome back</h1>
             <p className="text-slate-500 font-medium text-sm">Enter your credentials to access your account</p>
           </div>
 
           {error && (
-            <div className="bg-red-50 border border-red-100 text-red-600 p-4 rounded-2xl flex items-start gap-3 text-sm animate-shake">
+            <div className="bg-emerald-50 border border-emerald-100 text-emerald-700 p-4 rounded-2xl flex items-start gap-3 text-sm animate-shake">
               <AlertCircle size={18} className="shrink-0 mt-0.5" />
               <p>{error}</p>
             </div>
@@ -76,7 +76,7 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="name@example.com"
-                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
+                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
                 required
               />
             </div>
@@ -84,14 +84,14 @@ export default function Login() {
             <div className="space-y-1.5">
               <div className="flex items-center justify-between pl-1">
                 <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Password</label>
-                <Link to="/forgot-password" className="text-xs font-bold text-red-600 hover:underline">Forgot password?</Link>
+                <Link to="/forgot-password" className="text-xs font-bold text-emerald-700 hover:underline">Forgot password?</Link>
               </div>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"
-                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
+                className="w-full bg-slate-50 border-slate-200 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3.5 px-4 rounded-2xl outline-none transition-all font-medium text-slate-900 border"
                 required
               />
             </div>
@@ -99,7 +99,7 @@ export default function Login() {
             <button
               id="login-btn"
               disabled={loading}
-              className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-4 rounded-2xl shadow-xl shadow-red-200 transition-all flex items-center justify-center gap-2 mt-6 active:scale-95"
+              className="w-full bg-emerald-700 hover:bg-emerald-800 disabled:bg-emerald-300 text-white font-bold py-4 rounded-2xl shadow-xl shadow-emerald-200 transition-all flex items-center justify-center gap-2 mt-6 active:scale-95"
             >
               {loading ? <Loader2 size={20} className="animate-spin" /> : 'Sign In'}
             </button>
@@ -124,7 +124,7 @@ export default function Login() {
 
           <p className="text-center text-sm font-medium text-slate-500 pt-4">
             Don't have an account?{' '}
-            <Link to="/signup" className="text-red-600 font-bold hover:underline">Sign up</Link>
+            <Link to="/signup" className="text-emerald-700 font-bold hover:underline">Sign up</Link>
           </p>
         </div>
       </motion.div>

@@ -4,7 +4,7 @@
  * In a real production app, you'd use react-helmet-async for SSR-friendly meta tags.
  */
 export function setMetadata(title: string, description: string) {
-  document.title = `${title} — FreePDF`;
+  document.title = `${title} — SavePDF`;
   
   // Update meta description
   let metaDescription = document.querySelector('meta[name="description"]');
@@ -17,7 +17,7 @@ export function setMetadata(title: string, description: string) {
 
   // Update OG tags (simplified)
   const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle) ogTitle.setAttribute('content', `${title} — FreePDF`);
+  if (ogTitle) ogTitle.setAttribute('content', `${title} — SavePDF`);
   
   const ogDescription = document.querySelector('meta[property="og:description"]');
   if (ogDescription) ogDescription.setAttribute('content', description);

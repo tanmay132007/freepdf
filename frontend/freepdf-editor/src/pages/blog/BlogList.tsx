@@ -24,7 +24,7 @@ export default function BlogList() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    setMetadata('Blog — PDF Tips, Guides & Tutorials', 'The latest PDF editing tips, security guides, and conversion tutorials from the FreePDF team.');
+    setMetadata('Blog — PDF Tips, Guides & Tutorials', 'The latest PDF editing tips, security guides, and conversion tutorials from the SavePDF team.');
     setPosts(readBlogPosts());
   }, []);
 
@@ -43,7 +43,7 @@ export default function BlogList() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-red-600/10 text-red-600 rounded-full text-xs font-black uppercase tracking-widest"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-700/10 text-emerald-700 rounded-full text-xs font-black uppercase tracking-widest"
           >
             <Sparkles size={14} /> Our Journal
           </motion.div>
@@ -52,7 +52,7 @@ export default function BlogList() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-6xl font-black text-slate-900 font-syne tracking-tight"
           >
-            PDF Tips & <span className="text-red-600">Tutorials</span>
+            PDF Tips & <span className="text-emerald-700">Tutorials</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function BlogList() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-5 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap ${
                   activeCategory === cat 
-                    ? 'bg-white text-red-600 shadow-sm' 
+                    ? 'bg-white text-emerald-700 shadow-sm' 
                     : 'text-slate-400 hover:text-slate-600'
                 }`}
               >
@@ -91,7 +91,7 @@ export default function BlogList() {
               placeholder="Search articles..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-red-600 focus:ring-4 focus:ring-red-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900"
+              className="w-full bg-slate-50 border border-slate-100 focus:bg-white focus:border-emerald-700 focus:ring-4 focus:ring-emerald-50 py-3 pl-12 pr-4 rounded-2xl outline-none transition-all font-medium text-slate-900"
             />
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function BlogList() {
           <div className="text-center py-20 bg-slate-50 rounded-3xl border-2 border-dashed border-slate-200">
             <Search size={48} className="mx-auto text-slate-300 mb-4" />
             <p className="text-slate-500 font-bold font-syne">No articles found matching your criteria.</p>
-            <button onClick={() => {setSearchTerm(''); setActiveCategory('All');}} className="mt-4 text-red-600 font-bold hover:underline">Clear all filters</button>
+            <button onClick={() => {setSearchTerm(''); setActiveCategory('All');}} className="mt-4 text-emerald-700 font-bold hover:underline">Clear all filters</button>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -113,17 +113,17 @@ export default function BlogList() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="group flex flex-col h-full bg-white rounded-3xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300 border border-transparent hover:border-red-100 hover:shadow-2xl hover:shadow-red-500/10"
+                className="group flex flex-col h-full bg-white rounded-3xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300 border border-transparent hover:border-emerald-100 hover:shadow-2xl hover:shadow-emerald-500/10"
               >
                 <Link to={`/blog/${post.slug}`} className="block relative h-64 overflow-hidden bg-slate-100">
-                  <div className="absolute inset-0 bg-gradient-to-br from-red-600/5 to-slate-200"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-700/5 to-slate-200"></div>
                   <div className="absolute top-6 left-6">
                     <span className={`px-3 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest ${categoryColors[post.category] || 'bg-slate-200 text-slate-700 shadow-sm'}`}>
                       {post.category}
                     </span>
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-red-600/20 backdrop-blur-[2px]">
-                    <div className="bg-white text-red-600 p-4 rounded-full shadow-2xl scale-0 group-hover:scale-100 transition-transform duration-500">
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-emerald-700/20 backdrop-blur-[2px]">
+                    <div className="bg-white text-emerald-700 p-4 rounded-full shadow-2xl scale-0 group-hover:scale-100 transition-transform duration-500">
                       <ArrowRight size={24} />
                     </div>
                   </div>
@@ -132,7 +132,7 @@ export default function BlogList() {
                 <div className="flex-1 p-8 flex flex-col space-y-4">
                   <div className="space-y-3">
                     <Link to={`/blog/${post.slug}`}>
-                      <h2 className="text-2xl font-bold text-slate-900 font-syne tracking-tight group-hover:text-red-600 transition-colors leading-tight">
+                      <h2 className="text-2xl font-bold text-slate-900 font-syne tracking-tight group-hover:text-emerald-700 transition-colors leading-tight">
                         {post.title}
                       </h2>
                     </Link>
@@ -180,7 +180,7 @@ export default function BlogList() {
               />
               <button 
                 type="submit"
-                className="bg-red-600 hover:bg-red-700 text-white font-black uppercase tracking-widest text-xs px-10 py-5 rounded-2xl transition-all shadow-xl shadow-red-900/20 active:scale-95"
+                className="bg-emerald-700 hover:bg-emerald-800 text-white font-black uppercase tracking-widest text-xs px-10 py-5 rounded-2xl transition-all shadow-xl shadow-emerald-900/20 active:scale-95"
               >
                 Join Now
               </button>
