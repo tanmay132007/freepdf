@@ -2,7 +2,7 @@
 
 > 29 free online PDF tools. No installation. No signup required. Files deleted after 1 hour.
 
-**Live Site:** https://freepdf-psi.vercel.app/
+**Live Site:** https://www.savepdf.tech
 **GitHub:** https://github.com/tanmay132007/freepdf
 
 ---
@@ -157,7 +157,7 @@ REDIS_URL=rediss://default:xxx@xxx.upstash.io:6379
 SUPABASE_BUCKET=pdf-files
 
 # App
-FRONTEND_URL=https://apps-freepdf.vercel.app
+FRONTEND_URL=https://www.savepdf.tech
 PORT=4000
 ```
 
@@ -192,8 +192,8 @@ Supabase is a managed PostgreSQL database with built-in authentication, storage,
 
 ### Step 3 — Configure Auth
 1. **Auth → URL Configuration:**
-   - Site URL: `https://apps-freepdf.vercel.app`
-   - Redirect URLs: `https://apps-freepdf.vercel.app/auth/callback`
+   - Site URL: `https://www.savepdf.tech`
+   - Redirect URLs: `https://www.savepdf.tech/auth/callback`
 2. **Auth → Providers:**
    - Enable Google → paste Client ID + Secret from Google Cloud Console
 3. **Auth → Email Templates:**
@@ -272,7 +272,7 @@ For the Node.js API service:
 ```env
 SUPABASE_URL=
 SUPABASE_SERVICE_ROLE_KEY=
-FRONTEND_URL=https://apps-freepdf.vercel.app
+FRONTEND_URL=https://www.savepdf.tech
 REDIS_URL=
 R2_ACCOUNT_ID=
 R2_ACCESS_KEY_ID=
@@ -322,7 +322,7 @@ Vercel is the platform built for Next.js. It provides global CDN, automatic depl
 ### After deployment
 Update Render API service variable:
 ```
-FRONTEND_URL=https://apps-freepdf.vercel.app
+FRONTEND_URL=https://www.savepdf.tech
 ```
 
 Update Supabase Auth URL Configuration with your Vercel domain.

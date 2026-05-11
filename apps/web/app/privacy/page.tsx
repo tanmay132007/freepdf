@@ -25,7 +25,7 @@ const sections = [
   },
   {
     title: "Contact",
-    body: "For privacy questions, use the contact options on https://apps-freepdf.vercel.app."
+    body: "For privacy questions, use the contact options on https://www.savepdf.tech."
   }
 ];
 

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { tools } from "@/lib/tools";
 
-const baseUrl = "https://apps-freepdf.vercel.app";
+const baseUrl = "https://www.savepdf.tech";
 
 export default function sitemap(): MetadataRoute.Sitemap {
 

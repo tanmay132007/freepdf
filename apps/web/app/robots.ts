@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const siteUrl = "https://apps-freepdf.vercel.app";
+const siteUrl = "https://www.savepdf.tech";
 
 export default function robots(): MetadataRoute.Robots {
   return {

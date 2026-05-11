@@ -67,10 +67,10 @@ export function Footer() {
               Terms of Service
             </Link>
             <a
-              href="https://apps-freepdf.vercel.app"
+              href="https://www.savepdf.tech"
               className="hover:text-white"
             >
-              apps-freepdf.vercel.app
+              www.savepdf.tech
             </a>
           </div>
         </div>

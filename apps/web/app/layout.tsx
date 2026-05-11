@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://apps-freepdf.vercel.app";
+const siteUrl = "https://www.savepdf.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
